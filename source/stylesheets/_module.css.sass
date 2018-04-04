@@ -1,0 +1,29 @@
+.block-logo
+  width: $and_logo_size
+  height: $and_logo_size
+  background: url('../images/and_logo_1.png') no-repeat
+  background-size: auto $and_logo_size
+  background-position: 0 50%
+  animation: and_logo_1 1.5s steps(17) infinite
+  animation-play-state: paused
+  &:hover
+    animation-play-state: running
+
+@keyframes and_logo_1
+  from
+    background-position: -0px
+  to
+    background-position: -($and_logo_size * 17)
+
+.block-menu
+  float: right
+  text-align: right
+  li
+    display: block
+    padding-bottom: $grid_1x_size
+    padding-left: $grid_4x_size
+
+@media screen and (min-width: $small)
+  .block-menu
+    li
+      display: inline-block
