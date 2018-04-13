@@ -20,10 +20,22 @@
   text-align: right
   li
     display: block
-    padding-bottom: $grid_1x_size
-    padding-left: $grid_4x_size
+    padding:  0 0 $grid_1x_size $grid_4x_size
 
-@media screen and (min-width: $small)
+.intro
+  top: 15vh
+  position: absolute
+  left: 0
+  right: 0
+
+.block-home_project
+  margin: 80vh auto 0 auto
+  max-width: 1140px
+  .col-sm
+    padding: 0
+
+@include media-breakpoint-up(sm)
   .block-menu
     li
       display: inline-block
+      padding:  $grid_2x_size 0 $grid_1x_size $grid_4x_size

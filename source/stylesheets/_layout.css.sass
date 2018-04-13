@@ -1,6 +1,13 @@
-.block
-  margin: $grid_1x_size 0 $grid_1x_size
+.container
   padding: 0
+
+.block
+  margin: 0
+  padding: 0
+
+.block-text
+  margin: $grid_1x_size
+  padding: 0 $grid_1x_size 0 $grid_1x_size
 
 .page-content
   margin-top: 15em
@@ -11,14 +18,17 @@ header
   z-index: 10
   top: 0px
 
-.block-hello
-  width: 100%
-  height: 150vh
-
 .focus
   font-family: RationalText-SemiBold
 
-@media screen and (min-width: $small)
+.img-fluid
+  width: 100%
+  height: auto
+
+@include media-breakpoint-up(sm)
   .block
-    margin: $grid_2x_size 0 $grid_2x_size
+    margin: 0
+    padding: 0 $grid_1x_size 0 $grid_1x_size
+  .block-text
+    margin: 0
     padding: 0 $grid_1x_size 0 $grid_1x_size
