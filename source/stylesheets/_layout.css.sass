@@ -1,24 +1,23 @@
-header
-  position: fixed
-  width: 100%
-  z-index: 10
-  top: 0px
-  margin-top: 2em
-
-.container
-  padding: 0
-
-.block
-  margin: 0
-  padding: 0
-
-.page-content
-  margin-top: 15em
-
 .focus
   font-family: RationalText-SemiBold
 
+.intro
+  margin: 10.5em 0 0 9em
+  padding: $grid_05x_size*2 $grid_05x_size $grid_05x_size $grid_05x_size*2+1em
+  transition: $animation_2x_duration
+
 @include media-breakpoint-up(sm)
-  .block
-    margin: 0
-    padding: 0 $grid_1x_size 0 $grid_1x_size
+
+  .bloc-header
+    display: flex
+    align-items: center
+
+  .intro
+    margin: 10.2em 0 0 9em
+    padding: $grid_1x_size*2 $grid_1x_size $grid_1x_size $grid_1x_size*2+1em
+
+@include media-breakpoint-up(md)
+
+  .intro
+    margin: 9em 0 0 9em
+    padding: 16vh $grid_2x_size $grid_2x_size $grid_2x_size*2+1em

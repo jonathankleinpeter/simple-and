@@ -1,4 +1,4 @@
-.block-logo
+.logo
   width: $and_logo_size
   height: $and_logo_size
   background: url('../images/and_logo_1.png') no-repeat
@@ -6,6 +6,7 @@
   background-position: 0 50%
   animation: and_logo_1 1.5s steps(17) infinite
   animation-play-state: paused
+  z-index: 100
   &:hover
     animation-play-state: running
 
@@ -18,25 +19,23 @@
 .block-menu
   float: right
   text-align: right
+  position: absolute
+  right: 0.5em
   li
     letter-spacing: .15em
     display: block
-    padding:  0 0 $grid_1x_size $grid_4x_size
+    padding:  0 0 $grid_1x_size 0
 
-.author
-  position: absolute
-  margin-top: 12em
-  margin-left: -8.2em
-  font-size: $p_font_size
-  transform: rotate(-90deg)
-  letter-spacing: 0.15em
-
-.intro
-  top: 15vh
-  position: absolute
-  left: 0
-  right: 0
-  padding-left: 9em
+.block-author
+  transform: rotate(180deg)
+  display: inline-block
+  margin-left: 4.5em
+  .author
+    font-size: 1.6em
+    transform: rotate(90deg)
+    transform-origin: 100%
+    letter-spacing: 0.15em
+    white-space: nowrap
 
 .words
   position: relative
@@ -47,18 +46,18 @@
 .word2:after, .word2:hover:after
   content: ""
   background: url('../images/surligneur-closed.png') center no-repeat
-  background-size: 0.5em 1em
-  width: 1em
-  height: 1em
+  background-size: 0.4em
+  width: 0.8em
+  height: 0.8em
   margin-left: -0.5em
   display: inline-block
 
 .word2:hover:after
   content: ""
   background: url('../images/surligneur-open.png') center no-repeat
-  background-size: 0.5em 1em
-  width: 1em
-  height: 1em
+  background-size: 0.4em
+  width: 0.8em
+  height: 0.8em
   margin-left: -0.5em
   display: inline-block
 
@@ -82,6 +81,7 @@
 
 @include media-breakpoint-up(sm)
   .block-menu
+    position: initial
     li
       display: inline-block
-      padding:  $grid_2x_size 0 $grid_1x_size $grid_4x_size
+      padding:  $grid_1x_size 0 $grid_1x_size $grid_4x_size
