@@ -14,6 +14,7 @@
     "jquery": "^3.3.1",
     "modernizr": "3.6.0",
     "normalize.css": "^8.0.0",
-    "popper.js": "^1.12.9"
+    "popper.js": "^1.12.9",
+    "typesplit": "^1.0.0"
   }
 }

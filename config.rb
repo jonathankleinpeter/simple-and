@@ -48,6 +48,6 @@ page '/*.txt', layout: false
 # Sprockets
 activate :sprockets
 sprockets.append_path File.join(root, 'node_modules')
-sprockets.append_path File.join(root, 'node_modules/scrollmagic/scrollmagic/minified')
 sprockets.append_path File.join(root, 'source/stylesheets')
 sprockets.append_path File.join(root, 'node_modules/bootstrap-4-grid/scss')
+sprockets.append_path File.join(root, 'node_modules/typesplit')

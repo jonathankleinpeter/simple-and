@@ -19,20 +19,66 @@
   float: right
   text-align: right
   li
+    letter-spacing: .15em
     display: block
     padding:  0 0 $grid_1x_size $grid_4x_size
+
+.author
+  position: absolute
+  margin-top: 12em
+  margin-left: -8.2em
+  font-size: $p_font_size
+  transform: rotate(-90deg)
+  letter-spacing: 0.15em
 
 .intro
   top: 15vh
   position: absolute
   left: 0
   right: 0
+  padding-left: 9em
 
-.block-home_project
-  margin: 80vh auto 0 auto
-  max-width: 1140px
-  .col-sm
-    padding: 0
+.words
+  position: relative
+  display: inline-block
+
+//______________________VIGNETTES______________________//
+
+.word2:after, .word2:hover:after
+  content: ""
+  background: url('../images/surligneur-closed.png') center no-repeat
+  background-size: 0.5em 1em
+  width: 1em
+  height: 1em
+  margin-left: -0.5em
+  display: inline-block
+
+.word2:hover:after
+  content: ""
+  background: url('../images/surligneur-open.png') center no-repeat
+  background-size: 0.5em 1em
+  width: 1em
+  height: 1em
+  margin-left: -0.5em
+  display: inline-block
+
+.word8:after
+  content: ""
+  background: url('../images/web.png') center no-repeat
+  background-size: 1.2em 1em
+  width: 1.2em
+  height: 1em
+  margin-left: -0.3em
+  display: inline-block
+
+.word10:after
+  content: ""
+  background: url('../images/print.png') center no-repeat
+  background-size: 0.5em 1em
+  width: 1em
+  height: 1em
+  margin-left: -0.3em
+  display: inline-block
 
 @include media-breakpoint-up(sm)
   .block-menu

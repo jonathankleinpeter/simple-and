@@ -1,3 +1,10 @@
+header
+  position: fixed
+  width: 100%
+  z-index: 10
+  top: 0px
+  margin-top: 2em
+
 .container
   padding: 0
 
@@ -5,30 +12,13 @@
   margin: 0
   padding: 0
 
-.block-text
-  margin: $grid_1x_size
-  padding: 0 $grid_1x_size 0 $grid_1x_size
-
 .page-content
   margin-top: 15em
-
-header
-  position: fixed
-  width: 100%
-  z-index: 10
-  top: 0px
 
 .focus
   font-family: RationalText-SemiBold
 
-.img-fluid
-  width: 100%
-  height: auto
-
 @include media-breakpoint-up(sm)
   .block
-    margin: 0
-    padding: 0 $grid_1x_size 0 $grid_1x_size
-  .block-text
     margin: 0
     padding: 0 $grid_1x_size 0 $grid_1x_size
