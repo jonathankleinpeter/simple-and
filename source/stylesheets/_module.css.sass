@@ -1,3 +1,5 @@
+//______________________HEADER_MODULES______________________//
+
 .logo
   width: $and_logo_size
   height: $and_logo_size
@@ -31,53 +33,98 @@
   display: inline-block
   margin-left: 4.5em
   .author
-    font-size: 1.6em
+    font-size: $mention_font_size
     transform: rotate(90deg)
     transform-origin: 100%
     letter-spacing: 0.15em
     white-space: nowrap
 
+//______________________INTRO_MODULES______________________//
+
 .words
   position: relative
   display: inline-block
 
+//______________________SUMMARY_MODULES______________________//
+
+.summary
+  margin-top: 20vh
+  .summary-part
+    width: 100%
+    white-space: nowrap
+    display: block
+    margin-bottom: 20em
+    position: relative
+  .block-cover
+    overflow: hidden
+  h3
+    mix-blend-mode: multiply
+    width: 100%
+    position: absolute
+    top: 0
+    font-size: 30em
+    font-family: RationalText-SemiBold
+    color: $white
+    text-shadow: -1px 0 $black, 0 1px $black, 1px 0 $black, 0 -1px $black
+    animation: $animation_05x_duration
+    margin: 0em
+    overflow: hidden
+    line-height: 1.2em
+    z-index: 10
+    &:hover
+      color: $black
+      mix-blend-mode: none
+
+  img
+    opacity: 0
+    display none
+    height: 30em
+    top: 0px
+    left: 0px
+    display: inline
+    margin: 80px 4em 0 4em
+
 //______________________VIGNETTES______________________//
 
-.word2:after, .word2:hover:after
+%vignette-small-base
   content: ""
-  background: url('../images/surligneur-closed.png') center no-repeat
-  background-size: 0.4em
-  width: 0.8em
+  background-size: 0.8em 0.8em
+  width: 0.4em
   height: 0.8em
-  margin-left: -0.5em
   display: inline-block
+  background-position: 0 0
+  background-repeat: no-repeat
+  margin-right: 0.3em
+  &:hover
+    background-position: -0.4em 0
 
-.word2:hover:after
+%vignette-large-base
   content: ""
-  background: url('../images/surligneur-open.png') center no-repeat
-  background-size: 0.4em
+  background-size: 1.6em 0.8em
   width: 0.8em
   height: 0.8em
-  margin-left: -0.5em
   display: inline-block
+  background-position: 0 0
+  background-repeat: no-repeat
+  margin-right: 0.3em
+  &:hover
+    background-position: -0.8em 0
+
+.word2:after
+  @extend %vignette-small-base
+  background-image: url('../images/vignette_marker.png')
+
+
 
 .word8:after
-  content: ""
-  background: url('../images/web.png') center no-repeat
-  background-size: 1.2em 1em
-  width: 1.2em
-  height: 1em
-  margin-left: -0.3em
-  display: inline-block
+  @extend %vignette-large-base
+  background-image: url('../images/vignette_web.png')
 
 .word10:after
-  content: ""
-  background: url('../images/print.png') center no-repeat
-  background-size: 0.5em 1em
-  width: 1em
-  height: 1em
-  margin-left: -0.3em
-  display: inline-block
+  @extend %vignette-small-base
+  background-image: url('../images/vignette_print.png')
+
+//______________________MEDIA______________________//
 
 @include media-breakpoint-up(sm)
   .block-menu

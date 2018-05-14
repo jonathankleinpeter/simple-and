@@ -35,11 +35,14 @@ header, footer
     hyphens: auto
 
 p, ul li
-  font-size: $p_font_size
+  font-size: $mention_font_size
   font-family: RationalText-Light
   line-height: 1.3em
   transition: $animation_1x_duration
   hyphens: auto
+
+*::selection
+  background: $black
 
 @include media-breakpoint-up(sm)
   $a: 1
