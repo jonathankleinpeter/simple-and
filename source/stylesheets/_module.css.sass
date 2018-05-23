@@ -9,7 +9,8 @@
   animation: and_logo_1 1.5s steps(17) infinite
   animation-play-state: paused
   z-index: 100
-  &:hover
+  margin-left: -1em
+  &:hover, &:active
     animation-play-state: running
 
 @keyframes and_logo_1
@@ -31,8 +32,12 @@
 .block-author
   transform: rotate(180deg)
   display: inline-block
-  margin-left: 4.5em
-  .author
+  margin-left: 3.5em
+  .author-xs-height
+    display: inline-block
+  .author-md-height, .author-sm-height
+    display: none
+  .author-md-height, .author-xs-height, .author-sm-height
     font-size: $mention_font_size
     transform: rotate(90deg)
     transform-origin: 100%
@@ -44,6 +49,7 @@
 .words
   position: relative
   display: inline-block
+
 
 //______________________SUMMARY_MODULES______________________//
 
@@ -95,7 +101,7 @@
   background-position: 0 0
   background-repeat: no-repeat
   margin-right: 0.3em
-  &:hover
+  &:hover, &:active
     background-position: -0.4em 0
 
 %vignette-large-base
@@ -107,7 +113,7 @@
   background-position: 0 0
   background-repeat: no-repeat
   margin-right: 0.3em
-  &:hover
+  &:hover, &:active
     background-position: -0.8em 0
 
 .word2:after
@@ -132,3 +138,19 @@
     li
       display: inline-block
       padding:  $grid_1x_size 0 $grid_1x_size $grid_4x_size
+
+@media (min-height: 360px)
+  .author-sm-height
+    display: inline-block !important
+  .author-xs-height
+    display: none !important
+  .author-md-height
+    display: none !important
+
+@media (min-height: 580px)
+  .author-md-height
+    display: inline-block !important
+  .author-xs-height
+    display: none !important
+  .author-sm-height
+    display: none !important
