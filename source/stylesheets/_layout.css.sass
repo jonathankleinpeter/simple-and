@@ -2,9 +2,16 @@
   font-family: RationalText-SemiBold
 
 .page-content
-  margin: 10.5em 0 0 9em
-  padding: $grid_05x_size*2 0 $grid_05x_size $grid_05x_size*2+1em
+  margin: 0em 0 0 9.5em // 10.5em : to be on the same line than the author bloc
+  padding: 9em 0 $grid_05x_size $grid_05x_size
   transition: $animation_2x_duration
+
+.project-header
+  height: 80vh
+  background: url('../images/wedmag.png') no-repeat
+  position: relative
+  top: -9em
+  padding: 9em 0 $grid_05x_size $grid_05x_size 
 
 @include media-breakpoint-up(sm)
 
@@ -13,11 +20,17 @@
     align-items: center
 
   .page-content
-    margin: 10.2em 0 0 9em
-    padding: $grid_1x_size*2 0 $grid_1x_size $grid_1x_size*2+1em
+    margin: 0em 0 0 10em
+    padding: 9em 0 $grid_1x_size $grid_1x_size
+
+  .project-header
+    padding: 9em 0 $grid_1x_size $grid_1x_size 
 
 @include media-breakpoint-up(md)
 
   .page-content
-    margin: 9em 0 0 9em
-    padding: 16vh 0 $grid_2x_size $grid_2x_size*2+1em
+    margin: 0em 0 0 11em
+    padding: 9em 0 $grid_2x_size $grid_2x_size
+
+  .project-header
+    padding: 9em 0 $grid_2x_size $grid_2x_size 

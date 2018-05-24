@@ -33,6 +33,7 @@
   transform: rotate(180deg)
   display: inline-block
   margin-left: 3.5em
+  position: absolute
   .author-xs-height
     display: inline-block
   .author-md-height, .author-sm-height
@@ -45,6 +46,9 @@
     white-space: nowrap
 
 //______________________INTRO_MODULES______________________//
+
+.intro
+  margin-top: 2em
 
 .words
   position: relative
@@ -59,7 +63,7 @@
     width: 100%
     white-space: nowrap
     display: block
-    margin-bottom: 20em
+    margin-bottom: 15em
     position: relative
   .block-cover
     overflow: hidden
@@ -133,24 +137,39 @@
 //______________________MEDIA______________________//
 
 @include media-breakpoint-up(sm)
+
   .block-menu
     position: initial
     li
       display: inline-block
       padding:  $grid_1x_size 0 $grid_1x_size $grid_4x_size
 
+  .intro
+    margin-top: 2.5em
+
+@include media-breakpoint-up(md)
+
+  .intro
+    margin-top: 16vh
+
 @media (min-height: 360px)
+
   .author-sm-height
     display: inline-block !important
+
   .author-xs-height
     display: none !important
+
   .author-md-height
     display: none !important
 
 @media (min-height: 580px)
+
   .author-md-height
     display: inline-block !important
+
   .author-xs-height
     display: none !important
+
   .author-sm-height
     display: none !important
