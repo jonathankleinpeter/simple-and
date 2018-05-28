@@ -21,6 +21,24 @@
   to
     background-position: -($and_logo_size * 17)
 
+.menu__li
+  a
+    color: $black
+    text-decoration: none
+    position: relative
+    transition: $animation_05x_duration ease-in
+    &::after
+      font-size: 0em
+      content: "•"
+      position: absolute
+      text-align: center
+      top: 100%
+      left: 50%
+      transform: translateX(-50%)
+      transition: $animation_05x_duration ease-in
+    &:hover::after
+      font-size: $p_font_size
+
 .menu
   float: right
   text-align: right
@@ -30,6 +48,8 @@
     letter-spacing: .15em
     display: block
     padding:  0 0 $grid_1x_size 0
+    a
+      z-index: 1000
 
 .studio-name
   transform: rotate(180deg)
@@ -69,6 +89,7 @@
     display: block
     margin-bottom: 6em
     position: relative
+    z-index: 1
   .summary__container-cover
     overflow: hidden
   .summary__h3
@@ -172,6 +193,27 @@
 
   .column__img--small
     max-width: 500px
+
+// WORK MODULES
+//========================================================
+
+.card-project
+  max-width: 500px
+  margin-bottom: 8em
+
+.card-project__img
+  width: 100%
+  margin-bottom: $grid_2x_size
+
+.card-project__h3
+  font-family: RationalText-SemiBold
+
+.card-project__ul
+  li
+    display: inline-block
+    padding: 0 $grid_05x_size 0
+
+
 // MEDIA
 //========================================================
 
