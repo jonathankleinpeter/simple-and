@@ -5,9 +5,16 @@ body
   font-size: $base_grid_size
   font-family: RationalText-Light
 
+header
+  position: fixed
+  width: 100%
+  z-index: 10
+  top: 0px
+  transition: $animation_1x_duration
+
 header, footer
   margin: 0em
-  padding: 0em
+  padding: $grid_05x_size
 
 @font-face
   font-family: RationalText-Light
@@ -20,19 +27,42 @@ header, footer
 @for $i from 1 through length($h_group)
   h#{$i}
     font-size: nth($h_group, $i) / 1.4
-    font-family: RationalText-Light
     font-weight: initial
     line-height: 1.3em
-    margin: $grid_05x_size 0 $grid_05x_size
+    margin: 0 0 $grid_1x_size
+    transition: $animation_1x_duration
+    hyphens: auto
 
-p, a, ul li
-  font-size: $p_font_size
+h1
+  font-family: RationalText-SemiBold
+
+p, ul li
+  font-size: $p_font_size - 0.2
   font-family: RationalText-Light
-  line-height: 1.3em
+  line-height: 1.6em
+  transition: $animation_1x_duration
 
-@media screen and (min-width: $small)
-  $a: 1
-  @for $a from 1 through length($h_group)
-  h#{$a}
-    font-size: nth($h_group, $a)
-    margin: $grid_1x_size 0 $grid_1x_size
+*::selection
+  background: $black
+
+// MEDIA
+//========================================================
+
+@include media-breakpoint-up(sm)
+  @for $i from 1 through length($h_group)
+    h#{$i}
+      font-size: nth($h_group, $i)
+
+  header, footer
+    padding: $grid_1x_size
+
+  ul li
+    font-size: $p_font_size
+
+  p
+    font-size: $p_font_size
+
+@include media-breakpoint-up(md)
+
+  header, footer
+    padding: $grid_2x_size
