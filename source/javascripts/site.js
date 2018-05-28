@@ -7,7 +7,7 @@ $( document ).ready(function() {
 
 	//______________________TEXT_SPLITING_ANIMATION______________________//
 
-	var elementsToSplit = ".presentation";
+	var elementsToSplit = ".intro__presentation";
 	var animationTime = 0.4;
 
 	//Split span by words
@@ -17,7 +17,7 @@ $( document ).ready(function() {
 	for (i = 0; i < arr.length; ++i) {
 	    text+= "<span class='words word" + i + "'>" + arr[i] + "&nbsp;" + "</span>";
 	}
-	$(".presentation").html(text);
+	$(".intro__presentation").html(text);
 
 	//generate class calling
 
@@ -39,8 +39,9 @@ $( document ).ready(function() {
 
     function menuAnimation() {
 	    menuAnimation = new TimelineLite();
-		menuAnimation.from('.block-author', animationTime*2, {y: '-=40', autoAlpha: 0, ease:Power4.easeInOut});
-		menuAnimation.from('.block-menu', animationTime*2, {x: '-=40', autoAlpha: 0, ease:Power4.easeInOut}, 0);
+	    menuAnimation.from('.logo', animationTime*1.5, {scaleX:0, scaleY:0, ease:Power4.easeInOut});
+		menuAnimation.from('.studio-name', animationTime*1.5, {y: '-=40', autoAlpha: 0, ease:Power4.easeInOut}, 0);
+		menuAnimation.from('.menu', animationTime*1.5, {x: '-=40', autoAlpha: 0, ease:Power4.easeInOut}, 0);
 		return menuAnimation;
 	}
 
@@ -53,12 +54,12 @@ $( document ).ready(function() {
 	master.add(menuAnimation())
 	master.add(textSpliting(), '-=0.6');
 
-	//______________________MASTER_ANIMATION_____________________//
+	//______________________SUMMARY_ANIMATION_____________________//
 
-	var $summaryPart1 = [$("#workCover1"), $("#workCover2"), $("#workCover3"), $("#workCover4"), $("#workCover5")];
-	var $summaryPart2 = [$("#aboutCover1"), $("#aboutCover2"), $("#aboutCover3"), $("#aboutCover4"), $("#aboutCover5")];
-	var $summaryPart3 = [$("#contactCover1"), $("#contactCover2"), $("#contactCover3"), $("#contactCover4"), $("#contactCover5")];
-	var $summaryPart4 = [$("#blogCover1"), $("#blogCover2")];
+	var $summaryPart1 = [$("#summary__work-cover1"), $("#summary__work-cover2"), $("#summary__work-cover3"), $("#summary__work-cover4"), $("#summary__work-cover5")];
+	var $summaryPart2 = [$("#summary__about-cover1"), $("#summary__about-cover2"), $("#summary__about-cover3"), $("#summary__about-cover4"), $("#summary__about-over5")];
+	var $summaryPart3 = [$("#summary__contact-cover1"), $("#summary__contact-cover2"), $("#summary__contact-cover3"), $("#summary__contact-cover4"), $("#summary__contact-cover5")];
+	var $summaryPart4 = [$("#summary__blog-cover1"), $("#summary__blog-cover2")];
 
 	// init
 	var ctrl = new ScrollMagic.Controller({
@@ -109,5 +110,8 @@ $( document ).ready(function() {
 	    .addTo(ctrl);
 
 	});
+
+	//______________________PICTURES_ANIMATION_____________________//
+
 
 });

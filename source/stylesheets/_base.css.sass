@@ -37,23 +37,30 @@ h1
   font-family: RationalText-SemiBold
 
 p, ul li
-  font-size: $mention_font_size
+  font-size: $p_font_size - 0.2
   font-family: RationalText-Light
-  line-height: 1.3em
+  line-height: 1.6em
   transition: $animation_1x_duration
-  hyphens: auto
 
 *::selection
   background: $black
 
+// MEDIA
+//========================================================
+
 @include media-breakpoint-up(sm)
-  $a: 1
-  @for $a from 1 through length($h_group)
-  h#{$a}
-    font-size: nth($h_group, $a)
+  @for $i from 1 through length($h_group)
+    h#{$i}
+      font-size: nth($h_group, $i)
 
   header, footer
     padding: $grid_1x_size
+
+  ul li
+    font-size: $p_font_size
+
+  p
+    font-size: $p_font_size
 
 @include media-breakpoint-up(md)
 
