@@ -33,7 +33,7 @@ header, footer
     transition: $animation_1x_duration
     hyphens: auto
 
-h1
+h1, h2
   font-family: RationalText-SemiBold
 
 p, ul li
@@ -41,6 +41,15 @@ p, ul li
   font-family: RationalText-Light
   line-height: 1.6em
   transition: $animation_1x_duration
+
+ul
+  padding-left: 0
+  li
+    list-style-type: none
+
+a
+  color: $black
+  text-decoration: none
 
 *::selection
   background: $black

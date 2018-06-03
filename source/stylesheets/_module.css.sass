@@ -10,10 +10,45 @@
   animation: and_logo_1 1.5s steps(17) infinite
   animation-play-state: paused
   z-index: 100
-  margin-left: -1em
   transform-origin: 50% 50%
+  display: inline-block
   &:hover, &:active
     animation-play-state: running
+    
+.menu__li
+  a
+    color: $black
+    text-decoration: none
+    position: relative
+    transition: $animation_05x_duration ease-in
+    &::after
+      font-size: 0em
+      content: "-"
+      position: absolute
+      text-align: center
+      top: 80%
+      left: 50%
+      transform: translateX(-50%)
+      transition: $animation_05x_duration ease-in
+    &:hover::after
+      font-size: $p_font_size
+
+.menu__li--active 
+  a
+    &::after
+      content: "-"
+      position: absolute
+      text-align: center
+      top: 80%
+      left: 50%
+      transform: translateX(-50%)
+      transition: $animation_05x_duration ease-in
+      font-size: $p_font_size
+
+.menu
+  float: right
+  text-align: right
+  right: 0
 
 @keyframes and_logo_1
   from
@@ -21,20 +56,17 @@
   to
     background-position: -($and_logo_size * 17)
 
-.menu
-  float: right
-  text-align: right
-  position: absolute
-  right: 0
-  .menu__li
-    letter-spacing: .15em
-    display: block
-    padding:  0 0 $grid_1x_size 0
+.menu__li
+  letter-spacing: .15em
+  display: block
+  padding:  0 0 $grid_1x_size 0
+  a
+    z-index: 1000
 
 .studio-name
   transform: rotate(180deg)
-  display: inline-block
-  margin-left: 3.5em
+  display: block
+  margin-left: 4.5em
   position: absolute
   .studio-name__xs-height
     display: inline-block
@@ -46,12 +78,16 @@
     transform-origin: 100%
     letter-spacing: 0.15em
     white-space: nowrap
+    font-family: RationalText-Light
 
 // INTRO MODULES
 //========================================================
 
 .intro
   margin-top: 2em
+
+.intro__presentation
+  position: relative
 
 .words
   position: relative
@@ -69,6 +105,14 @@
     display: block
     margin-bottom: 6em
     position: relative
+    z-index: 1
+  .part__number
+    position: relative
+    &::after
+      content: "_"
+      position: absolute
+      left: 0
+      top: 0.8em
   .summary__container-cover
     overflow: hidden
   .summary__h3
@@ -171,7 +215,38 @@
 
   .column__img--small
     max-width: 500px
-    
+
+.previous-project, .next-project
+  position: fixed
+  bottom: 2em
+  z-index: 100
+  p 
+    margin: 0
+
+.previous-project
+  left: 4em
+
+.next-project
+  right: 2em
+
+// WORK MODULES
+//========================================================
+
+.card-project
+  margin-bottom: 8em
+
+.card-project__img
+  width: 100%
+  margin-bottom: $grid_2x_size
+
+.card-project__h3
+  font-family: RationalText-SemiBold
+
+.card-project__ul
+  li
+    display: inline-block
+    padding: 0 $grid_05x_size 0 0
+
 // MEDIA
 //========================================================
 
@@ -185,6 +260,7 @@
 
   .studio-name__md-height, .studio-name__xs-height, .studio-name__sm-height
     font-size: $p_font_size !important
+    font-family: RationalText-Light
   .intro
     margin-top: 2.5em
 
@@ -194,6 +270,7 @@
 
   .project-header__h1
     font-size: 8em
+    line-height: 1.1em
 
   .column__img, .column__img--small
     margin-left: -1em !important
@@ -206,6 +283,9 @@
 
   .column__p
     margin: 10em 4.5em 10em 0 !important
+
+  .previous-project
+    left: 4.5em
 
 @include media-breakpoint-up(md)
 
@@ -237,6 +317,10 @@
   .column__img
     margin-left: -6em !important
 
+@include media-breakpoint-only(md)
+  .column__p--headline
+    font-size: 2em !important
+
 @include media-breakpoint-up(lg)
 
   .summary
@@ -247,6 +331,9 @@
 
   .project-header__h1
     font-size: 12em
+
+  .previous-project
+    left: 5.5em
 
 @media (min-height: 360px)
 

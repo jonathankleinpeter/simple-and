@@ -5,12 +5,18 @@
   margin: 0em 0 0 9.5em // 10.5em : to be on the same line than the author bloc
   padding-top: 9em !important
   padding-right: 0 !important
-  transition: $animation_2x_duration
+  animation: $animation_2x_duration ease-in-out pageContentAppear
+  position: relative
+
+  @keyframes pageContentAppear
+    from
+      opacity: 0
+    to
+      opacity: 1
 
 .block--project-header
   height: 80vh
   min-height: 50em
-  background: url('../images/wedmag.png') 25% no-repeat
   background-color: $black_5percent
   background-size: cover
   position: relative
@@ -18,6 +24,23 @@
   padding-top: 9em !important
   padding-right: 0 !important
   overflow: hidden
+  animation: $animation_2x_duration ease-in-out projectHeaderAppear
+  background-position: 100% 0vh
+
+  @keyframes projectHeaderAppear
+    from
+      opacity: 0
+      background-position: 100% 10em
+    to
+      opacity: 1
+      background-position: 100% 0vh
+
+$i: 1
+@for $i from 1 through length($background_project)
+  .background-#{nth($background_project, $i)}
+    background-image: url(../images/#{nth($background_project, $i)}.png)
+    background-repeat: no-repeat
+    background-size: 800px
 
 .focus
   font-family: RationalText-SemiBold
@@ -26,17 +49,19 @@
 //========================================================
 
 @include media-breakpoint-up(sm)
-
   .block
     padding: $grid_1x_size
-
   .block--page-content
     margin: 0em 0 0 10em
 
 @include media-breakpoint-up(md)
-
   .block
     padding: $grid_2x_size
-
   .block--page-content
     margin: 0em 0 0 11em
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)
+  @for $i from 1 through length($background_project)
+    .background-#{nth($background_project, $i)}
+      background-image: url(../images/#{nth($background_project, $i)}@2x.png)
+

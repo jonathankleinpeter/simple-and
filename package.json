@@ -18,5 +18,8 @@
     "popper.js": "^1.12.9",
     "scrollmagic": "^2.0.5",
     "typesplit": "^1.0.0"
+  },
+  "devDependencies": {
+    "barba.js": "^1.0.0"
   }
 }

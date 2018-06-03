@@ -1,10 +1,11 @@
 doctype 5
 html
     head
-        = partial "/partials/head"
+        = partial "/partials/head" 
     body
         header
             = partial "/partials/header"
+        = partial "/partials/header_project"
         = yield
         footer
             = partial "/partials/footer"
