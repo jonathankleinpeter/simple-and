@@ -1,0 +1,8 @@
+---
+title: Toujours plus
+date: 2018-06-01
+tags: example, blog
+heading_image: images/journal/baticopro_3.jpg
+---
+
+C'est vraiment très interessant !

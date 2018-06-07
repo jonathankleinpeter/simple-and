@@ -50,7 +50,6 @@ activate :blog do |blog|
     blog.permalink = "journal/{year}/{month}/{day}/{title}"
     blog.sources = "journal/{year}-{month}-{day}-{title}.html"
     blog.tag_template = "tag.html"
-    blog.calendar_template = "calendar.html"
 end
 
 # Sprockets

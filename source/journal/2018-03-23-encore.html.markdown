@@ -1,8 +1,8 @@
 ---
-title: Devenez designer en 3 lecons
-date: 2018-11-01
+title: Bonjour Bonjour
+date: 2018-03-23
 tags: secrets, wesh, blog
-heading_image: images/journal/header-project.png
+heading_image: images/journal/baticopro_2.png
 ---
 
 This is an example article. You probably want to delete it and write your own articles!
