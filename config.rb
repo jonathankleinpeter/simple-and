@@ -12,6 +12,7 @@ end
 page '/*.xml', layout: false
 page '/*.json', layout: false
 page '/*.txt', layout: false
+page "/feed.xml", layout: false
 
 # With alternative layout
 # page '/path/to/file.html', layout: 'other_layout'
@@ -44,6 +45,13 @@ page '/*.txt', layout: false
 #   activate :minify_css
 #   activate :minify_javascript
 # end
+
+activate :blog do |blog|
+    blog.permalink = "journal/{year}/{month}/{day}/{title}"
+    blog.sources = "journal/{year}-{month}-{day}-{title}.html"
+    blog.tag_template = "tag.html"
+    blog.calendar_template = "calendar.html"
+end
 
 # Sprockets
 activate :sprockets
