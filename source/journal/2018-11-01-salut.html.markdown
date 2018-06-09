@@ -3,6 +3,7 @@ title: Devenez designer en 3 lecons
 date: 2018-11-01
 tags: secrets, wesh, blog
 heading_image: images/journal/header-project.png
+resume: Chloe & Jonathan presentation. We are making cool stuff for cool company. Just let us know by email if you would like a design from us. We design visual identity ...
 ---
 
 This is an example article. You probably want to delete it and write your own articles!

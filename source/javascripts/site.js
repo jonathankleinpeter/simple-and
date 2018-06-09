@@ -11,24 +11,22 @@ $( document ).ready(function() {
     var animationTime = 0.4;
     var elementsToSplit = ".intro__presentation";
 
-        //Split span by words
+    //Split span by words
 
-        var arr = $(elementsToSplit).text().split(" ");
-        var text="";
-        for (i = 0; i < arr.length; ++i) {
-            text+= "<span class='words word" + i + "'>" + arr[i] + "&nbsp;" + "</span>";
-        }
-        $(".intro__presentation").html(text);
+    var arr = $(elementsToSplit).text().split(" ");
+    var text="";
+    for (i = 0; i < arr.length; ++i) {
+        text+= "<span class='words word" + i + "'>" + arr[i] + "&nbsp;" + "</span>";
+    }
+    $(".intro__presentation").html(text);
 
-        //generate class calling
+    //generate class calling
 
-        var $span = [];
+    var $span = [];
 
-        for (i = 0; i <= arr.length; ++i) {
-            $span[i] = $(".word"+i);
-        }
-
-    //render animation
+    for (i = 0; i <= arr.length; ++i) {
+        $span[i] = $(".word"+i);
+    }
 
     function splitAnimation() {
         splitAnimation = new TimelineLite();
@@ -114,6 +112,7 @@ $( document ).ready(function() {
         .setTween(tweenimg) // trigger a TweenMax.to tween
         .addTo(ctrl);      
     });
+
     // MENU_PAGE_STATE
     //========================================================
 
@@ -128,4 +127,8 @@ $( document ).ready(function() {
         $('.menu__li').removeClass('menu__li--active')
         $('.menu__li').eq(2).addClass('menu__li--active')
     }
+
+    // MENU_PAGE_STATE
+    //========================================================
+
 });
