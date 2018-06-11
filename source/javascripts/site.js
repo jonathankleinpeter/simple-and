@@ -132,14 +132,14 @@ $( document ).ready(function() {
     //========================================================
 
     var tooltip = document.querySelectorAll('.titletip');
-
+    
     document.addEventListener('mousemove', fn, false);
-
     function fn(e) {
-
         for (var i=tooltip.length; i--;) {
             tooltip[i].style.left = e.clientX + 'px';
             tooltip[i].style.top = e.clientY + 'px';
+            tooltip[i].style.transition = '0.2s';
         }
     }
+
 });

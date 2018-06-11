@@ -193,26 +193,26 @@
   margin-bottom: 9em
   overflow: hidden
 
-  .column__text-container
-    margin: 10em 0em 10em 0
+.column__text-container
+  margin: 10em 0em 10em 0
 
-  .column__p
-    max-width: 600px
+.column__p
+  max-width: 600px
 
-  .column__p--small
-    max-width: 500px
+.column__p--small
+  max-width: 500px
 
-  .column__p--headline
-    font-size: 3em
-    margin-top: 2.5em !important
-    margin-bottom: 2.5em !important
+.column__p--headline
+  font-size: 3em
+  margin-top: 2.5em !important
+  margin-bottom: 2.5em !important
 
-  .column__img
-    padding: 0 1em 0 0
-    width: 100%
-    max-width: 900px
-    margin: 3em 0 3em -0.5em
-    display: block
+.column__img
+  padding: 0 1em 0 0
+  width: 100%
+  max-width: 900px
+  margin: 3em 0 3em -0.5em
+  display: block
 
 .previous-project, .next-project
   position: fixed
@@ -231,15 +231,10 @@
 //========================================================
 
 .card-project
-  margin-bottom: 8em
+  margin-bottom: 2em
 
 .card-project__img
   width: 100%
-  margin-bottom: $grid_2x_size
-
-.card-project:hover
-  .card-project__h3
-    opacity: 1
 
 .card-project__ul
   li
@@ -247,7 +242,8 @@
     padding: 0
 
 .titletip
-  display: none
+  visibility: hidden
+  opacity: 0
   width: 300px
   font-family: RationalText-SemiBold
   position: fixed
@@ -257,10 +253,11 @@
   text-align: center
   margin-top: -2em
   z-index: 1000
-
+  transition: visibility 0.2s, opacity 0.2s ease-in-out
 
 .card-project:hover .titletip
-  display: block
+  visibility: visible
+  opacity: 1
 
 
 // JOURNAL
@@ -275,23 +272,20 @@
   margin-bottom: 8em
 
 .journal-article__img
-  max-width: 300px
+  width: 100%
 
 .journal-article__info
   max-width: 300px
+  margin-top: 1em
 
 .col--max-with
   max-width: 300px
 
 .journal-h1 
-  font-size: 8em
-  display: block
-  padding: 0
-  overflow: hidden
-  hyphens: none
+  margin-bottom: 2em
 
-.journal-article-resume, .journal-article__tag
-  opacity: 0.5
+.journal-article-resume
+  font-family: RationalText-SemiBold
 
 .journal-article-resume
   margin: 0.5em 0 2em 0
