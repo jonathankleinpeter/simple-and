@@ -128,7 +128,18 @@ $( document ).ready(function() {
         $('.menu__li').eq(2).addClass('menu__li--active')
     }
 
-    // MENU_PAGE_STATE
+    // TOOLTIP
     //========================================================
 
+    var tooltip = document.querySelectorAll('.titletip');
+
+    document.addEventListener('mousemove', fn, false);
+
+    function fn(e) {
+
+        for (var i=tooltip.length; i--;) {
+            tooltip[i].style.left = e.clientX + 'px';
+            tooltip[i].style.top = e.clientY + 'px';
+        }
+    }
 });

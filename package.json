@@ -17,6 +17,7 @@
     "normalize.css": "^8.0.0",
     "popper.js": "^1.12.9",
     "scrollmagic": "^2.0.5",
+    "tooltipster": "^4.2.6",
     "typesplit": "^1.0.0"
   },
   "devDependencies": {

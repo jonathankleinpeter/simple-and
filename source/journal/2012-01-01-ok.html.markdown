@@ -3,7 +3,8 @@ title: C'est vraiment tres interessant ! Il m'en faut plus
 date: 2012-01-01
 tags: example, blog
 heading_image: images/journal/weddingmag_2.jpg
-resume: Chloe & Jonathan presentation. We are making cool stuff for cool company. Just let us know by email if you would like a design from us. We design visual identity ...
+resume: Chloe & Jonathan presentation
+author: Chloe
 ---
 
 C'est vraiment très interessant !
