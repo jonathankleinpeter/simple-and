@@ -106,7 +106,7 @@ $( document ).ready(function() {
 
         // build a scene
         var sceneimg = new ScrollMagic.Scene({
-            triggerHook: 0.75,
+            triggerHook: 0.85,
             triggerElement: this
         })
         .setTween(tweenimg) // trigger a TweenMax.to tween
