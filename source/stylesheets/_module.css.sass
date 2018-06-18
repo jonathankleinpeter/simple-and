@@ -251,7 +251,6 @@
   top: 0
   transform: translateX(-50%)
   text-align: center
-  margin-top: -2em
   z-index: 1000
   transition: visibility 0.2s, opacity 0.2s ease-in-out
 
@@ -273,13 +272,16 @@
 
 .journal-article__img
   width: 100%
+  height: 300px
+  object-fit: cover
+  border: 1px solid rgba(0, 0, 0, .1)
 
 .journal-article__info
   max-width: 300px
   margin-top: 1em
 
 .col--max-with
-  max-width: 300px
+  max-width: 500px
 
 .journal-h1 
   margin-bottom: 2em
@@ -318,8 +320,6 @@
   display: inline-block
   &::before
     content: ", "
-
-
 
 // MEDIA
 //========================================================
@@ -363,6 +363,7 @@
 
   .journal-article__info
     padding-left: 2em
+    margin-top: 0em
 
 @include media-breakpoint-up(md)
 
@@ -396,7 +397,6 @@
 
   .journal-article__info
     max-width: 600px
-    padding-left: 4em
 
 @include media-breakpoint-only(md)
   .column__p--headline
