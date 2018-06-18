@@ -187,6 +187,7 @@
 
 .project-header__h3
   font-size: $p_font_size - 0.2
+  margin: 1em 0 0 0.5em
 
 .project-content
   margin-top: -9em
@@ -253,6 +254,7 @@
   text-align: center
   z-index: 1000
   transition: visibility 0.2s, opacity 0.2s ease-in-out
+  margin-top: -2em
 
 .card-project:hover .titletip
   visibility: visible
@@ -343,7 +345,7 @@
       font-size: 15em
 
   .project-header__h1
-    font-size: 8em
+    font-size: 6em
     line-height: 1.1em
 
   .column__img, .column__img--small
@@ -387,7 +389,7 @@
     top: initial
 
   .project-header__h1
-    font-size: 10em
+    font-size: 7em
 
   .project-content__column
     padding-left: 5em
@@ -410,11 +412,13 @@
     .summary__h3
       font-size: 30em
 
-  .project-header__h1
-    font-size: 10em
-
   .previous-project
     left: 5.5em
+
+@include media-breakpoint-up(xl)
+
+  .project-header__h1
+    font-size: 10em
 
 @media (min-height: 360px)
 
