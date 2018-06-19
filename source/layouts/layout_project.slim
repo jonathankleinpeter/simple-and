@@ -5,7 +5,9 @@ html
     body
         header
             = partial "/partials/header"
-        = partial "/partials/header_project"
-        = yield
-        footer
-            = partial "/partials/footer"
+        #barba-wrapper
+            .barba-container
+                = partial "/partials/header_project"
+                = yield
+                footer
+                    = partial "/partials/footer"

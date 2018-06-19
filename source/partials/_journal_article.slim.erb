@@ -15,7 +15,7 @@
                     p.mention__date
                         = article.date.strftime('%b %e')
                     ul.journal-article__ul
-                        - blog.tags.each do |tag, articles|
+                        - article.tags.each do |tag, articles|
                             li.journal-article__tag
                                 = link_to 'tag-' + tag + '.html'
                                     span= tag
