@@ -6,6 +6,10 @@
 
 $( document ).ready(function() {
 
+    // init
+        var ctrl = new ScrollMagic.Controller({
+    });
+
     Barba.Pjax.start();
     var animationTime = 0.4;
 
@@ -56,10 +60,6 @@ $( document ).ready(function() {
             var $summaryPart1 = [$("#summary__work-cover1"), $("#summary__work-cover2"), $("#summary__work-cover3"), $("#summary__work-cover4"), $("#summary__work-cover5")];
             var $summaryPart2 = [$("#summary__about-cover1"), $("#summary__about-cover2"), $("#summary__about-cover3"), $("#summary__about-cover4"), $("#summary__about-over5")];
             var $summaryPart3 = [$("#summary__journal-cover1"), $("#summary__journal-cover2")];
-
-            // init
-            var ctrl = new ScrollMagic.Controller({
-            });
 
             // Create scenes
             $("#trigger1").each(function(i) {
@@ -190,10 +190,8 @@ $( document ).ready(function() {
             * At this stage newContainer is on the DOM (inside our #barba-container and with visibility: hidden)
             * Please note, newContainer is available just after newContainerLoading is resolved!
             */
-
             var _this = this;
             var $el = $(this.newContainer);
-
             $(this.oldContainer).hide();
 
             $el.css({
@@ -208,7 +206,7 @@ $( document ).ready(function() {
                 */
                 _this.done();
             });
-            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
         }
     });
 
