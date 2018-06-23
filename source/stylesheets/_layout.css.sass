@@ -2,6 +2,14 @@
   padding: $grid_05x_size
   overflow: hidden
 
+.loader-image
+  position: relative
+  &::before
+    content: "ok"
+    position: absolute
+    left: 50%
+    top: 50%
+
 .block--page-content
   margin: 0em 0 0 9.5em // 10.5em : to be on the same line than the author bloc
   padding-top: 9em !important

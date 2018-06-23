@@ -6,7 +6,7 @@ html
         header
             = partial "/partials/header"
         #barba-wrapper
-            .barba-container
+            .barba-container data-namespace= current_page.data.data_namespace
                 = yield
-                footer
-                    = partial "/partials/footer"
+        footer
+            = partial "/partials/footer"
