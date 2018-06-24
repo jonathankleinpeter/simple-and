@@ -13,7 +13,7 @@ $( document ).ready(function() {
     Barba.Pjax.start();
     var animationTime = 0.4;
 
-    // This is the js associate with a specific page. This will be loaded by Barba.js when the user trying to load the associated page
+    // This is the js associate with a specific page. This will be loaded by Barba.js when the user tries to load the associated page
 
     var Homepage = Barba.BaseView.extend({
         namespace: 'homepage',
