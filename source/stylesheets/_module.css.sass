@@ -142,42 +142,94 @@
 // VIGNETTES
 //========================================================
 
-%vignette
+%vignette__bold-text
   display: inline-block
   background-position: 0 0
   background-repeat: no-repeat
-  margin-right: 0.3em
+  margin-right: 0.22em
+
+%vignette__light-text
+  display: inline-block
+  background-position: 0 0
+  background-repeat: no-repeat
+  margin-right: 0em
+  margin-left: 0.3em
 
 %vignette__small-base
   content: ""
-  background-size: 0.8em 0.8em
-  width: 0.4em
-  height: 0.8em
+  background-size: 1em 1em
+  width: 0.5em
+  height: 1em
   &:hover, &:active
-    background-position: -0.4em 0
+    background-position: -0.5em 0
 
 %vignette__large-base
   content: ""
-  background-size: 1.6em 0.8em
-  width: 0.8em
-  height: 0.8em
+  background-size: 2em 1em
+  width: 1em
+  height: 1em
   &:hover, &:active
-    background-position: -0.8em 0
+    background-position: -1em 0
 
 .word2:after
-  @extend %vignette
+  @extend %vignette__bold-text
   @extend %vignette__small-base
   background-image: url('../images/vignette_marker.png')
 
 .word8:after
-  @extend %vignette
+  @extend %vignette__bold-text
   @extend %vignette__large-base
   background-image: url('../images/vignette_web.png')
 
 .word10:after
-  @extend %vignette
+  @extend %vignette__bold-text
   @extend %vignette__small-base
   background-image: url('../images/vignette_print.png')
+
+.tailor:after
+  @extend %vignette__light-text
+  @extend %vignette__large-base
+  background-image: url('../images/vignette_tailor.png')
+
+.deteriorate:after
+  @extend %vignette__light-text
+  @extend %vignette__large-base
+  background-image: url('../images/vignette_deteriorate.png')
+
+.mind:after
+  @extend %vignette__light-text
+  @extend %vignette__large-base
+  background-image: url('../images/vignette_mind.png')
+
+.campanile:after
+  @extend %vignette__light-text
+  @extend %vignette__large-base
+  background-image: url('../images/vignette_campanile.png')
+
+.amsterdam:after
+  @extend %vignette__light-text
+  @extend %vignette__large-base
+  background-image: url('../images/vignette_amsterdam.png')
+
+.digital:after
+  @extend %vignette__light-text
+  @extend %vignette__large-base
+  background-image: url('../images/vignette_digital.png')
+
+.accounting:after
+  @extend %vignette__light-text
+  @extend %vignette__large-base
+  background-image: url('../images/vignette_accounting.png')
+
+.management:after
+  @extend %vignette__light-text
+  @extend %vignette__large-base
+  background-image: url('../images/vignette_management.png')
+
+.hibiscus:after
+  @extend %vignette__light-text
+  @extend %vignette__large-base
+  background-image: url('../images/vignette_hibiscus.png')
 
 // PROJECT MODULES
 //========================================================

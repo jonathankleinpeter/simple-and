@@ -47,7 +47,7 @@ page "/feed.xml", layout: false
 # end
 
 activate :blog do |blog|
-    blog.permalink = "journal/{year}/{month}/{day}/{title}"
+    blog.permalink = "journal/{year}-{month}-{title}"
     blog.sources = "journal/{year}-{month}-{day}-{title}.html"
     blog.tag_template = "tag.html"
     blog.taglink = "tag-{tag}.html"
@@ -62,3 +62,13 @@ sprockets.append_path File.join(root, 'node_modules/typesplit')
 sprockets.append_path File.join(root, 'node_modules/scrollmagic/scrollmagic/uncompressed')
 sprockets.append_path File.join(root, 'node_modules/scrollmagic/scrollmagic/uncompressed/plugins')
 sprockets.append_path File.join(root, 'node_modules/barba.js/dist')
+
+configure :build do
+  activate :minify_css
+  activate :minify_javascript
+
+  # Append a hash to asset urls (make sure to use the url helpers)
+  activate :asset_hash
+
+  activate :asset_host, :host => '//YOURDOMAIN.cloudfront.net'
+end
