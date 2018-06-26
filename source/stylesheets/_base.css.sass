@@ -5,6 +5,7 @@ body
   font-size: $base_grid_size
   font-family: RationalText-Light
   -webkit-font-smoothing: antialiased
+  font-variant-ligatures: none
 
 header
   position: fixed
@@ -19,11 +20,11 @@ header, footer
 
 @font-face
   font-family: RationalText-Light
-  src: url(../fonts/RationalText-Light.otf)
+  src: url(../fonts/RationalText-Light.ttf)
 
 @font-face
   font-family: RationalText-SemiBold
-  src: url(../fonts/RationalText-SemiBold.otf)
+  src: url(../fonts/RationalText-SemiBold.ttf)
 
 @for $i from 1 through length($h_group)
   h#{$i}
