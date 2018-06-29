@@ -123,8 +123,7 @@ $( document ).ready(function() {
     Homepage.init();
     Work.init();
 
-    Barba.Dispatcher.on('newPageReady', function() {
-
+    Barba.Dispatcher.on('transitionCompleted', function() {
         // PICTURES_ANIMATION
         //========================================================
 
@@ -141,7 +140,9 @@ $( document ).ready(function() {
             .setTween(tweenimg) // trigger a TweenMax.to tween
             .addTo(ctrl);      
         });
+    });
 
+    Barba.Dispatcher.on('newPageReady', function() {
         // MENU_PAGE_STATE
         //========================================================
 
@@ -181,7 +182,7 @@ $( document ).ready(function() {
              * this.oldContainer is the HTMLElement of the old Container
              */
 
-            return $(this.oldContainer).animate({ opacity: 0 }).promise();
+            return $(this.oldContainer).animate({ opacity: 0}, 300).promise();
         },
 
         fadeIn: function() {
@@ -199,7 +200,7 @@ $( document ).ready(function() {
                 opacity : 0
             });
 
-            $el.animate({ opacity: 1 }, 400, function() {
+            $el.animate({ opacity: 1}, 300, function() {
                 /**
                 * Do not forget to call .done() as soon your transition is finished!
                 * .done() will automatically remove from the DOM the old Container

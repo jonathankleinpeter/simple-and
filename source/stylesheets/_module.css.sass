@@ -231,6 +231,21 @@
   @extend %vignette__large-base
   background-image: url('../images/vignette_hibiscus.png')
 
+.paris:after
+  @extend %vignette__light-text
+  @extend %vignette__large-base
+  background-image: url('../images/vignette_paris.png')
+
+.love:after
+  @extend %vignette__light-text
+  @extend %vignette__large-base
+  background-image: url('../images/vignette_love.png')
+
+.creativity:after
+  @extend %vignette__light-text
+  @extend %vignette__large-base
+  background-image: url('../images/vignette_creativity.png')
+
 // PROJECT MODULES
 //========================================================
 
@@ -266,6 +281,9 @@
   margin-top: 2.5em !important
   margin-bottom: 2.5em !important
 
+.column__p--bold
+  font-family: RationalText-SemiBold
+
 .column__img
   width: 100%
   margin: 3em 0 3em 0
@@ -283,6 +301,19 @@
 
 .next-project
   right: 2em
+
+// ABOUT MODULES
+//========================================================
+
+.skill_ul
+  li
+    font-size: $h3_font_size
+
+.block--about
+  margin-top: 4em 0 4em 0
+
+.visual-link
+  text-decoration: underline
 
 // WORK MODULES
 //========================================================
@@ -378,6 +409,11 @@
   display: inline-block
   &::before
     content: ", "
+
+.article__img
+  width: 100%
+  margin: 3em 0 3em 0
+  display: block
 
 // MEDIA
 //========================================================
