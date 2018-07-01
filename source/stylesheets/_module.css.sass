@@ -528,6 +528,10 @@
     transition: visibility 0.2s, opacity 0.2s ease-in-out
     margin-top: -2em
 
+@media (max-height: 500px)
+  .previous-project, .next-project
+    display: none
+
 @include media-breakpoint-up(xl)
 
   .project-header__h1

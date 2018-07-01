@@ -207,9 +207,7 @@ $( document ).ready(function() {
                 */
                 _this.done();
             });
-            document.documentElement.scrollTop = 0;
-            window.documentElement.scrollTop = 0;
-            window.screen.documentElement.scrollTop = 0;
+            $(window).scrollTop(0);
         }
     });
 
