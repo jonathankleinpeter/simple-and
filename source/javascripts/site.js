@@ -157,14 +157,6 @@ $( document ).ready(function() {
             $('.menu__li').removeClass('menu__li--active')
             $('.menu__li').eq(2).addClass('menu__li--active')
         }
-
-        // HAMBURGER_MENU
-        //========================================================
-        $('.container-menu').on("click", function() {
-            $('.menu').toggleClass('active')
-            $('.hamburger-top').toggleClass('cross-top')
-            $('.hamburger-bottom').toggleClass('cross-bottom')
-        });
     });
 
     // BARBA BASIC PAGE TRANSITION

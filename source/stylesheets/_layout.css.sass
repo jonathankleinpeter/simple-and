@@ -16,51 +16,9 @@
 
 .container-menu
   position: fixed
-  top: 1.6em
+  top: 0
   right: 0
   margin-right: 1em
-  padding: 2em
-  .hamburger-top
-    width: 2.4em
-    height: 1.4em
-    border-top: 3px solid $black
-    transform-origin: center center
-    position: absolute
-  .hamburger-bottom
-    width: 2.4em
-    height: 1.4em
-    border-bottom: 3px solid $black
-    transform-origin: center center
-    position: absolute
-  ul.menu
-    display: none
-
-.hamburger-menu
-  position: relative
-  width: 2.4em
-  height: 1.4em
-
-.cross-top
-  animation: rotatetop 0.2s forwards
-.cross-bottom
-  animation: rotatebottom 0.2s forwards
-
-@keyframes rotatetop
-  0%
-    transform: rotate(0deg)
-  100%
-    transform: rotate(45deg)
-    top: 25%
-
-@keyframes rotatebottom
-  0%
-    transform: rotate(0deg)
-  100%
-    transform: rotate(-45deg)
-    top: -25%
-
-.active
-  display: initial !important
 
 .block--page-content
   margin: 0em
@@ -115,10 +73,6 @@ $i: 1
     margin-right: 2em
   .container-name
     display: initial
-
-  .container-menu
-    ul.menu
-      display: block
 
 @include media-breakpoint-up(xl)
   .block--project-header
