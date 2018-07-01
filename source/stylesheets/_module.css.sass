@@ -2,6 +2,7 @@
 //========================================================
 
 .logo
+  margin: $grid_1x_size 0.4em $grid_1x_size 0.4em
   width: $and_logo_size
   height: $and_logo_size
   background: url('../images/and_logo_1.png') no-repeat
@@ -12,6 +13,7 @@
   z-index: 100
   transform-origin: 50% 50%
   display: inline-block
+  isolation: isolate
   &:hover, &:active
     animation-play-state: running
     
@@ -66,8 +68,9 @@
 .studio-name
   transform: rotate(180deg)
   display: block
-  margin-left: 4.5em
+  margin-left: 5em
   position: absolute
+  color: white
   .studio-name__xs-height
     display: inline-block
   .studio-name__md-height, .studio-name__sm-height
@@ -84,7 +87,7 @@
 //========================================================
 
 .intro
-  margin-top: 2em
+  margin-top: 11em
 
 .intro__presentation
   position: relative
@@ -249,6 +252,9 @@
 // PROJECT MODULES
 //========================================================
 
+.container-project
+  padding: 4em 1em 1em 1em !important
+
 .project-header__h1
   margin-bottom: 0
 
@@ -261,12 +267,6 @@
   margin-bottom: 9em
   overflow: hidden
 
-.project-content__column
-  padding-right: 1.5em
-
-.project-content__column-small
-  padding-left: 1.5em
-
 .column__text-container
   margin: 10em 0em 10em 0
 
@@ -278,29 +278,30 @@
 
 .column__p--headline
   font-size: 3em
-  margin-top: 2.5em !important
-  margin-bottom: 2.5em !important
 
 .column__p--bold
   font-family: RationalText-SemiBold
 
 .column__img
   width: 100%
-  margin: 3em 0 3em 0
+  margin: 1em 0 1em 0
   display: block
 
 .previous-project, .next-project
   position: fixed
-  bottom: 2em
+  padding: 2em
+  bottom: 1em
   z-index: 100
   p 
     margin: 0
 
 .previous-project
-  left: 4em
+  left: 0em
+  margin-left: -1em
 
 .next-project
-  right: 2em
+  right: 0em
+  margin-right: -1em
 
 // ABOUT MODULES
 //========================================================
@@ -310,16 +311,22 @@
     font-size: $h3_font_size
 
 .block--about
-  margin-top: 4em 0 4em 0
+  margin: 4em 0 4em 0
 
 .visual-link
   text-decoration: underline
+
+.about__section
+  margin-top: 6em
+
+.hyphens
+  hyphens: auto
 
 // WORK MODULES
 //========================================================
 
 .card-project
-  margin-bottom: 2em
+  margin-bottom: 1em
 
 .card-project__img
   width: 100%
@@ -330,18 +337,8 @@
     padding: 0
 
 .titletip
-  visibility: hidden
-  opacity: 0
-  width: 300px
   font-family: RationalText-SemiBold
-  position: fixed
-  left: 0
-  top: 0
-  transform: translateX(-50%)
-  text-align: center
-  z-index: 1000
-  transition: visibility 0.2s, opacity 0.2s ease-in-out
-  margin-top: -2em
+  margin: 0.5em 0 1em 0
 
 .card-project:hover .titletip
   visibility: visible
@@ -365,8 +362,11 @@
   object-fit: cover
   border: 1px solid rgba(0, 0, 0, .1)
 
+.column__img--article
+  max-width: 600px
+
 .journal-article__info
-  max-width: 300px
+  max-width: 500px
   margin-top: 1em
 
 .col--max-with
@@ -415,6 +415,12 @@
   margin: 3em 0 3em 0
   display: block
 
+// FOOTER
+//========================================================
+
+.visual-link--footer
+  color: $white
+
 // MEDIA
 //========================================================
 
@@ -429,8 +435,11 @@
   .studio-name__md-height, .studio-name__xs-height, .studio-name__sm-height
     font-size: $p_font_size !important
     font-family: RationalText-Light
+
   .intro
     margin-top: 2.5em
+  .intro--project
+    margin-top: 11em
 
   .summary
     .summary__h3
@@ -446,33 +455,40 @@
   .column__text-container
     margin: 6em 70px 6em 0 !important
 
-  .previous-project
-    left: 4.5em
-
   .journal-article__info
     padding-left: 2em
     margin-top: 0em
 
-@include media-breakpoint-up(md)
+  .studio-name
+    margin-left: 5.5em
 
+@include media-breakpoint-up(md)
+  .container-project
+    margin-top: 4em
+  .logo
+    margin: $grid_2x_size
   .intro
     margin-top: 16vh
   .intro--project
     margin-top: initial
+    margin-left: 4em // for a cool design effect
+    bottom: 8em
     position: absolute
     top: 50%
-    transform: translateY(-50%)
+    transform: none
+    top: initial
   .summary
     .summary__part
       margin-bottom: 14em
     .summary__h3
       font-size: 20em
 
-  .intro--project
-    margin-left: 4em // for a cool design effect
-    bottom: 8em
-    transform: none
-    top: initial
+  .card-project
+    padding-left: 0em
+    padding-right: 2em
+
+  .column__img
+    margin: 2em 0 2em 0
 
   .project-header__h1
     font-size: 7em
@@ -480,25 +496,47 @@
   .journal-article__info
     max-width: 600px
 
-@include media-breakpoint-only(md)
-  .column__p--headline
-    font-size: 2em !important
+  .studio-name
+    margin-left: 6.5em
 
-@include media-breakpoint-up(lg)
+  .card-project
+    margin-bottom: 2em
 
-  .summary
-    .summary__part
-      margin-bottom: 24em
-    .summary__h3
-      font-size: 30em
+  .project-content__column
+    padding-right: 1em
+
+  .project-content__column-small
+    padding-left: 1em
+    padding-right: 2em
 
   .previous-project
-    left: 5.5em
+    left: 4.5em
+
+  .next-project
+    right: 1em
+
+  .titletip
+    visibility: hidden
+    opacity: 0
+    width: 300px
+    position: fixed
+    left: 0
+    top: 0
+    transform: translateX(-50%)
+    text-align: center
+    z-index: 1000
+    transition: visibility 0.2s, opacity 0.2s ease-in-out
+    margin-top: -2em
 
 @include media-breakpoint-up(xl)
 
   .project-header__h1
     font-size: 10em
+  .summary
+    .summary__part
+      margin-bottom: 24em
+    .summary__h3
+      font-size: 28em
 
 @media (min-height: 360px)
 

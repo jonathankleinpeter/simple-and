@@ -1,10 +1,10 @@
 - page_articles.each_with_index do |article, i|
     .journal-article
         .row
-            .col-sm-4.col--max-with
+            .col-sm-12.col-md-4.col--max-with
                 = link_to article
                     img.journal-article__img src="journal/#{article.data.heading_image}"
-            .col-sm-8.journal-article__info
+            .col-sm-12.col-md-8.journal-article__info
                 h2
                     = link_to article.title, article
                 p.journal-article-resume

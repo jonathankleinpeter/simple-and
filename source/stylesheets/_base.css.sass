@@ -1,3 +1,5 @@
+html
+  background: $white
 body
   margin: 0em
   padding: 0em
@@ -6,17 +8,22 @@ body
   font-family: RationalText-Light
   -webkit-font-smoothing: antialiased
   font-variant-ligatures: none
+  background-color: $white
 
 header
   position: fixed
-  width: 100%
+  display: inline-block
   z-index: 10
-  top: 0px
   transition: $animation_1x_duration
 
+footer
+  padding: 4em 0 4em 0
+  background: $black
+  color: $white
+
 header, footer
-  margin: 0em
-  padding: $grid_05x_size
+  margin: 0
+  padding: 0
 
 @font-face
   font-family: RationalText-Light
@@ -64,16 +71,8 @@ a
     h#{$i}
       font-size: nth($h_group, $i)
 
-  header, footer
-    padding: $grid_1x_size
-
   ul li
     font-size: $p_font_size
 
   p
     font-size: $p_font_size
-
-@include media-breakpoint-up(md)
-
-  header, footer
-    padding: $grid_2x_size
