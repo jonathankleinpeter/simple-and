@@ -3,7 +3,7 @@
         .row
             .col-sm-12.col-md-4.col--max-with
                 = link_to article
-                    img.journal-article__img src="journal/#{article.data.heading_image}"
+                    img.journal-article__img src=article.data.heading_image
             .col-sm-12.col-md-8.journal-article__info
                 h2
                     = link_to article.title, article

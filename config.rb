@@ -47,7 +47,7 @@ page "/feed.xml", layout: false
 # end
 
 activate :blog do |blog|
-    blog.permalink = "journal/{year}-{month}-{title}"
+    blog.permalink = "journal-{year}-{month}-{title}"
     blog.sources = "journal/{year}-{month}-{day}-{title}.html"
     blog.tag_template = "tag.html"
     blog.taglink = "tag-{tag}.html"
