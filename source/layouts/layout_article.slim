@@ -1,0 +1,23 @@
+doctype 5
+html
+    head
+        = partial "/partials/head" 
+    body
+        header
+            = partial "/partials/header"
+        = partial "/partials/menu"
+        #barba-wrapper
+            .barba-container data-namespace="article"
+                .block.block--page-content
+                    section
+                        .row
+                            .col-sm-12.col-md-10.col-lg-8
+                                img.column__img.column__img--article src=current_page.data.heading_image
+                                h1 = current_page.data.title
+                                .journal-article__mention
+                                    p.mention__author
+                                       h3 = current_page.data.author + ', ' + current_page.data.date.strftime('%b %e')
+                                = yield
+
+        footer
+            = partial "/partials/footer"

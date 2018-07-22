@@ -1,0 +1,19 @@
+---
+pageable: true
+per_page: 10
+---
+
+.block.block--page-content
+    section
+        - if paginate && num_pages > 1
+            p
+                | Page #{page_number} of #{num_pages}
+        - if paginate
+            - if prev_page
+            p= link_to 'Previous page', prev_page
+
+        = partial "/partials/journal_article"
+
+        - if paginate
+            - if next_page
+            p= link_to 'Next page', next_page

@@ -12,6 +12,7 @@ end
 page '/*.xml', layout: false
 page '/*.json', layout: false
 page '/*.txt', layout: false
+page "/feed.xml", layout: false
 
 # With alternative layout
 # page '/path/to/file.html', layout: 'other_layout'
@@ -45,6 +46,13 @@ page '/*.txt', layout: false
 #   activate :minify_javascript
 # end
 
+activate :blog do |blog|
+    blog.permalink = "journal-{year}-{month}-{title}"
+    blog.sources = "journal/{year}-{month}-{day}-{title}.html"
+    blog.tag_template = "tag.html"
+    blog.taglink = "tag-{tag}.html"
+end
+
 # Sprockets
 activate :sprockets
 sprockets.append_path File.join(root, 'node_modules')
@@ -53,3 +61,9 @@ sprockets.append_path File.join(root, 'node_modules/bootstrap-4-grid/scss')
 sprockets.append_path File.join(root, 'node_modules/typesplit')
 sprockets.append_path File.join(root, 'node_modules/scrollmagic/scrollmagic/uncompressed')
 sprockets.append_path File.join(root, 'node_modules/scrollmagic/scrollmagic/uncompressed/plugins')
+sprockets.append_path File.join(root, 'node_modules/barba.js/dist')
+
+configure :build do
+  activate :minify_css
+  activate :minify_javascript
+end

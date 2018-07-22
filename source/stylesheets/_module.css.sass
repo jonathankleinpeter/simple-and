@@ -2,6 +2,7 @@
 //========================================================
 
 .logo
+  margin: $grid_1x_size 0.4em $grid_1x_size 0.4em
   width: $and_logo_size
   height: $and_logo_size
   background: url('../images/and_logo_1.png') no-repeat
@@ -10,17 +11,12 @@
   animation: and_logo_1 1.5s steps(17) infinite
   animation-play-state: paused
   z-index: 100
-  margin-left: -1em
   transform-origin: 50% 50%
+  display: inline-block
+  isolation: isolate
   &:hover, &:active
     animation-play-state: running
-
-@keyframes and_logo_1
-  from
-    background-position: -0px
-  to
-    background-position: -($and_logo_size * 17)
-
+    
 .menu__li
   a
     color: $black
@@ -29,33 +25,52 @@
     transition: $animation_05x_duration ease-in
     &::after
       font-size: 0em
-      content: "•"
+      content: "-"
       position: absolute
       text-align: center
-      top: 100%
+      top: 80%
       left: 50%
       transform: translateX(-50%)
       transition: $animation_05x_duration ease-in
     &:hover::after
       font-size: $p_font_size
 
+.menu__li--active 
+  a
+    &::after
+      content: "-"
+      position: absolute
+      text-align: center
+      top: 80%
+      left: 50%
+      transform: translateX(-50%)
+      transition: $animation_05x_duration ease-in
+      font-size: $p_font_size
+
 .menu
   float: right
   text-align: right
-  position: absolute
   right: 0
-  .menu__li
-    letter-spacing: .15em
-    display: block
-    padding:  0 0 $grid_1x_size 0
-    a
-      z-index: 1000
+
+@keyframes and_logo_1
+  from
+    background-position: -0px
+  to
+    background-position: -($and_logo_size * 17)
+
+.menu__li
+  letter-spacing: .15em
+  display: block
+  padding:  0 0 $grid_1x_size 0
+  a
+    z-index: 1000
 
 .studio-name
   transform: rotate(180deg)
-  display: inline-block
-  margin-left: 3.5em
+  display: block
+  margin-left: 5em
   position: absolute
+  color: white
   .studio-name__xs-height
     display: inline-block
   .studio-name__md-height, .studio-name__sm-height
@@ -66,12 +81,16 @@
     transform-origin: 100%
     letter-spacing: 0.15em
     white-space: nowrap
+    font-family: RationalText-Light
 
 // INTRO MODULES
 //========================================================
 
 .intro
-  margin-top: 2em
+  margin-top: 11em
+
+.intro__presentation
+  position: relative
 
 .words
   position: relative
@@ -90,6 +109,13 @@
     margin-bottom: 6em
     position: relative
     z-index: 1
+  .part__number
+    position: relative
+    &::after
+      content: "_"
+      position: absolute
+      left: 0
+      top: 0.8em
   .summary__container-cover
     overflow: hidden
   .summary__h3
@@ -113,106 +139,287 @@
 
   .summary__img
     opacity: 0
-    display none
     height: 30em
     margin: 80px 4em 0 4em
 
 // VIGNETTES
 //========================================================
 
-%vignette
+%vignette__bold-text
   display: inline-block
   background-position: 0 0
   background-repeat: no-repeat
-  margin-right: 0.3em
+  margin-right: 0.22em
+
+%vignette__light-text
+  display: inline-block
+  background-position: 0 0
+  background-repeat: no-repeat
+  margin-right: 0em
+  margin-left: 0.3em
 
 %vignette__small-base
   content: ""
-  background-size: 0.8em 0.8em
-  width: 0.4em
-  height: 0.8em
+  background-size: 1em 1em
+  width: 0.5em
+  height: 1em
   &:hover, &:active
-    background-position: -0.4em 0
+    background-position: -0.5em 0
 
 %vignette__large-base
   content: ""
-  background-size: 1.6em 0.8em
-  width: 0.8em
-  height: 0.8em
+  background-size: 2em 1em
+  width: 1em
+  height: 1em
   &:hover, &:active
-    background-position: -0.8em 0
+    background-position: -1em 0
 
 .word2:after
-  @extend %vignette
+  @extend %vignette__bold-text
   @extend %vignette__small-base
   background-image: url('../images/vignette_marker.png')
 
 .word8:after
-  @extend %vignette
+  @extend %vignette__bold-text
   @extend %vignette__large-base
   background-image: url('../images/vignette_web.png')
 
 .word10:after
-  @extend %vignette
+  @extend %vignette__bold-text
   @extend %vignette__small-base
   background-image: url('../images/vignette_print.png')
 
+.tailor:after
+  @extend %vignette__light-text
+  @extend %vignette__large-base
+  background-image: url('../images/vignette_tailor.png')
+
+.deteriorate:after
+  @extend %vignette__light-text
+  @extend %vignette__large-base
+  background-image: url('../images/vignette_deteriorate.png')
+
+.mind:after
+  @extend %vignette__light-text
+  @extend %vignette__large-base
+  background-image: url('../images/vignette_mind.png')
+
+.campanile:after
+  @extend %vignette__light-text
+  @extend %vignette__large-base
+  background-image: url('../images/vignette_campanile.png')
+
+.amsterdam:after
+  @extend %vignette__light-text
+  @extend %vignette__large-base
+  background-image: url('../images/vignette_amsterdam.png')
+
+.digital:after
+  @extend %vignette__light-text
+  @extend %vignette__large-base
+  background-image: url('../images/vignette_digital.png')
+
+.accounting:after
+  @extend %vignette__light-text
+  @extend %vignette__large-base
+  background-image: url('../images/vignette_accounting.png')
+
+.management:after
+  @extend %vignette__light-text
+  @extend %vignette__large-base
+  background-image: url('../images/vignette_management.png')
+
+.hibiscus:after
+  @extend %vignette__light-text
+  @extend %vignette__large-base
+  background-image: url('../images/vignette_hibiscus.png')
+
+.paris:after
+  @extend %vignette__light-text
+  @extend %vignette__large-base
+  background-image: url('../images/vignette_paris.png')
+
+.love:after
+  @extend %vignette__light-text
+  @extend %vignette__large-base
+  background-image: url('../images/vignette_love.png')
+
+.creativity:after
+  @extend %vignette__light-text
+  @extend %vignette__large-base
+  background-image: url('../images/vignette_creativity.png')
+
 // PROJECT MODULES
 //========================================================
+
+.container-project
+  padding: 4em 1em 1em 1em !important
 
 .project-header__h1
   margin-bottom: 0
 
 .project-header__h3
   font-size: $p_font_size - 0.2
+  margin: 1em 0 0 0.5em
 
 .project-content
   margin-top: -9em
+  margin-bottom: 9em
   overflow: hidden
 
-  .column__p
-    margin: 10em 0em 10em 0
+.column__text-container
+  margin: 10em 0em 10em 0
 
-  .column__p
-    max-width: 600px
+.column__p
+  max-width: 600px
 
-  .column__p--small
-    max-width: 500px
+.column__p--small
+  max-width: 500px
 
-  .column__p--headline
-    font-size: 4em
-    margin-top: 2.5em !important
-    margin-bottom: 2.5em !important
-    font-family: RationalText-SemiBold
+.column__p--headline
+  font-size: 3em
 
-  .column__img
-    padding: 4em 1em 4em 0
-    width: 100%
-    max-width: 900px
-    margin-left: -0.5em
+.column__p--bold
+  font-family: RationalText-SemiBold
 
-  .column__img--small
-    max-width: 500px
+.column__img
+  width: 100%
+  margin: 1em 0 1em 0
+  display: block
+
+.previous-project, .next-project
+  position: fixed
+  padding: 2em
+  bottom: 1em
+  z-index: 100
+  p 
+    margin: 0
+
+.previous-project
+  left: 0em
+  margin-left: -1em
+
+.next-project
+  right: 0em
+  margin-right: -1em
+
+// ABOUT MODULES
+//========================================================
+
+.skill_ul
+  li
+    font-size: $h3_font_size
+
+.block--about
+  margin: 4em 0 4em 0
+
+.visual-link
+  text-decoration: underline
+
+.about__section
+  margin-top: 6em
+
+.hyphens
+  overflow-wrap: break-word
 
 // WORK MODULES
 //========================================================
 
 .card-project
-  max-width: 500px
-  margin-bottom: 8em
+  margin-bottom: 1em
 
 .card-project__img
   width: 100%
-  margin-bottom: $grid_2x_size
-
-.card-project__h3
-  font-family: RationalText-SemiBold
 
 .card-project__ul
   li
     display: inline-block
-    padding: 0 $grid_05x_size 0
+    padding: 0
 
+.titletip
+  font-family: RationalText-SemiBold
+  margin: 0.5em 0 1em 0
+
+.card-project:hover .titletip
+  visibility: visible
+  opacity: 1
+
+
+// JOURNAL
+//========================================================
+
+.journal-article__ul
+  li
+    display: inline-block
+    padding: 0
+
+.journal-article
+  margin-bottom: 8em
+
+.journal-article__img
+  width: 100%
+  height: 300px
+  object-fit: cover
+  border: 1px solid rgba(0, 0, 0, .1)
+
+.column__img--article
+  max-width: 600px
+
+.journal-article__info
+  max-width: 500px
+  margin-top: 1em
+
+.col--max-with
+  max-width: 500px
+
+.journal-h1 
+  margin-bottom: 2em
+
+.journal-article-resume
+  font-family: RationalText-SemiBold
+
+.journal-article-resume
+  margin: 0.5em 0 2em 0
+
+.journal-article__tag
+  font-size: 1.4em
+  margin: 0
+  margin-right: 1em
+  span
+    position: relative
+    &::after
+      font-size: 0em
+      content: "-"
+      position: absolute
+      text-align: center
+      top: 60%
+      left: 50%
+      transform: translateX(-50%)
+      transition: $animation_05x_duration ease-in
+    &:hover::after
+      font-size: $p_font_size
+
+.mention__author
+  font-size: 1.4em
+  margin: 0
+  display: inline-block
+.mention__date
+  font-size: 1.4em
+  margin: 0
+  display: inline-block
+  &::before
+    content: ", "
+
+.article__img
+  width: 100%
+  margin: 3em 0 3em 0
+  display: block
+
+// FOOTER
+//========================================================
+
+.visual-link--footer
+  color: $white
 
 // MEDIA
 //========================================================
@@ -227,68 +434,113 @@
 
   .studio-name__md-height, .studio-name__xs-height, .studio-name__sm-height
     font-size: $p_font_size !important
+    font-family: RationalText-Light
+
   .intro
     margin-top: 2.5em
+  .intro--project
+    margin-top: 11em
 
   .summary
     .summary__h3
       font-size: 15em
 
   .project-header__h1
-    font-size: 8em
-
-  .column__img, .column__img--small
-    margin-left: -1em !important
+    font-size: 6em
+    line-height: 1.1em
 
   .project-header__h3
     font-size: $p_font_size
 
-  .project-content
-    padding-top: 6em
+  .column__text-container
+    margin: 6em 70px 6em 0 !important
 
-  .column__p
-    margin: 10em 4.5em 10em 0 !important
+  .journal-article__info
+    padding-left: 2em
+    margin-top: 0em
+
+  .studio-name
+    margin-left: 5.5em
 
 @include media-breakpoint-up(md)
-
+  .container-project
+    margin-top: 4em
+  .logo
+    margin: $grid_2x_size
   .intro
     margin-top: 16vh
   .intro--project
     margin-top: initial
+    margin-left: 4em // for a cool design effect
+    bottom: 8em
     position: absolute
     top: 50%
-    transform: translateY(-50%)
+    transform: none
+    top: initial
   .summary
     .summary__part
       margin-bottom: 14em
     .summary__h3
       font-size: 20em
 
-  .intro--project
-    margin-left: 4em // for a cool design effect
-    bottom: 8em
-    transform: none
-    top: initial
+  .card-project
+    padding-left: 0em
+    padding-right: 2em
+
+  .column__img
+    margin: 2em 0 2em 0
+
+  .project-header__h1
+    font-size: 7em
+
+  .journal-article__info
+    max-width: 600px
+
+  .studio-name
+    margin-left: 6.5em
+
+  .card-project
+    margin-bottom: 2em
+
+  .project-content__column
+    padding-right: 1em
+
+  .project-content__column-small
+    padding-left: 1em
+    padding-right: 2em
+
+  .previous-project
+    left: 4.5em
+
+  .next-project
+    right: 1em
+
+  .titletip
+    visibility: hidden
+    opacity: 0
+    width: 300px
+    position: fixed
+    left: 0
+    top: 0
+    transform: translateX(-50%)
+    text-align: center
+    z-index: 1000
+    transition: visibility 0.2s, opacity 0.2s ease-in-out
+    margin-top: -2em
+
+@media (max-height: 500px)
+  .previous-project, .next-project
+    display: none
+
+@include media-breakpoint-up(xl)
 
   .project-header__h1
     font-size: 10em
-
-  .project-content__column
-    padding-left: 5em
-
-  .column__img
-    margin-left: -6em !important
-
-@include media-breakpoint-up(lg)
-
   .summary
     .summary__part
       margin-bottom: 24em
     .summary__h3
-      font-size: 30em
-
-  .project-header__h1
-    font-size: 12em
+      font-size: 28em
 
 @media (min-height: 360px)
 

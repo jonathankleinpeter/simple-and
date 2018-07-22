@@ -1,23 +1,53 @@
 .block
-  padding: $grid_05x_size
+  padding: $grid_1x_size
+  overflow: hidden
+
+#barba-wrapper
+  min-height: 90vh
+
+.container-name, .container-menu
+  z-index: 10
+
+.container-name
+  mix-blend-mode: exclusion
+  position: fixed
+  top: 13em
+  display: none
+
+.container-menu
+  position: fixed
+  top: 0
+  right: 0
+  margin-right: 1em
 
 .block--page-content
-  margin: 0em 0 0 9.5em // 10.5em : to be on the same line than the author bloc
-  padding-top: 9em !important
-  padding-right: 0 !important
-  transition: $animation_2x_duration
+  margin: 0em
+  position: relative
+  padding: 14em 1em 1em 1em !important
+
+.block--page-content--project
+  padding: 0 !important
+
+.block--page-content--home
+  padding-right: 0em !important
+
+.block--page-content--footer
+  padding-top: 0em !important
 
 .block--project-header
   height: 80vh
   min-height: 50em
-  background: url('../images/header-project@2x.png') 25% no-repeat
   background-color: $black_5percent
-  background-size: cover
   position: relative
-  top: -9em
-  padding-top: 9em !important
-  padding-right: 0 !important
   overflow: hidden
+  background-position: center 100%
+  background-size: 600px
+
+$i: 1
+@for $i from 1 through length($background_project)
+  .background-#{nth($background_project, $i)}
+    background-image: url(../images/#{nth($background_project, $i)}.png)
+    background-repeat: no-repeat
 
 .focus
   font-family: RationalText-SemiBold
@@ -26,17 +56,35 @@
 //========================================================
 
 @include media-breakpoint-up(sm)
-
-  .block
-    padding: $grid_1x_size
-
-  .block--page-content
-    margin: 0em 0 0 10em
+  .container-menu
+    top: 14px
 
 @include media-breakpoint-up(md)
-
   .block
     padding: $grid_2x_size
-
   .block--page-content
-    margin: 0em 0 0 11em
+    margin: 0em 0 0 12em
+  .block--page-content--project
+    padding-top: 0 !important
+    padding-right: 0 !important
+  .block--project-header
+    background-position: 90% 20%
+  .container-menu
+    margin-right: 2em
+  .container-name
+    display: initial
+
+@include media-breakpoint-up(xl)
+  .block--project-header
+    background-position: 85% 20%
+    background-size: 800px
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)
+  @for $i from 1 through length($background_project)
+    .background-#{nth($background_project, $i)}
+      background-image: url(../images/#{nth($background_project, $i)}@2x.png)
+
+@media (max-height: 700px) and (max-width: 768px)
+  .block--project-header
+    background-size: 400px
+

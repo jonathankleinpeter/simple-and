@@ -1,0 +1,21 @@
+- page_articles.each_with_index do |article, i|
+    .journal-article
+        .row
+            .col-sm-12.col-md-4.col--max-with
+                = link_to article
+                    img.journal-article__img src=article.data.heading_image
+            .col-sm-12.col-md-8.journal-article__info
+                h2
+                    = link_to article.title, article
+                p.journal-article-resume
+                    = article.data.resume
+                .journal-article__mention
+                    p.mention__author
+                        = article.data.author
+                    p.mention__date
+                        = article.date.strftime('%b %e')
+                    ul.journal-article__ul
+                        - article.tags.each do |tag, articles|
+                            li.journal-article__tag
+                                = link_to 'tag-' + tag + '.html'
+                                    span= tag
