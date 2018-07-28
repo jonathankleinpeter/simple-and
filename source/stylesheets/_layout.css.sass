@@ -45,7 +45,7 @@
 
 $i: 1
 @for $i from 1 through length($background_project)
-  .background-#{nth($background_project, $i)}
+  .#{nth($background_project, $i)}
     background-image: url(../images/#{nth($background_project, $i)}.png)
     background-repeat: no-repeat
 
@@ -81,7 +81,7 @@ $i: 1
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)
   @for $i from 1 through length($background_project)
-    .background-#{nth($background_project, $i)}
+    .#{nth($background_project, $i)}
       background-image: url(../images/#{nth($background_project, $i)}@2x.png)
 
 @media (max-height: 700px) and (max-width: 768px)
