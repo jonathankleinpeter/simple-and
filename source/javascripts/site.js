@@ -138,7 +138,7 @@ $( document ).ready(function() {
                 triggerElement: this
             })
             .setTween(tweenimg) // trigger a TweenMax.to tween
-            .addTo(ctrl);      
+            .addTo(ctrl);
         });
     });
 
@@ -157,6 +157,14 @@ $( document ).ready(function() {
             $('.menu__li').removeClass('menu__li--active')
             $('.menu__li').eq(2).addClass('menu__li--active')
         }
+
+        // facebook share button
+
+        $(".facebookShareLink").on("click",function(currentStatus, oldStatus, container){
+            var linkToShare = "https://www.facebook.com/sharer/sharer.php?u=" + window.location.href + "&amp;src=sdkpreparse"
+            var fbpopup = window.open(linkToShare, "pop", "width=600, height=400, scrollbars=no");
+            return false;
+        });
     });
 
     // HEAD_RELOAD

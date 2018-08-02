@@ -11,12 +11,15 @@ meta charset="utf-8"
     title=current_page.data.h1_wording || current_page.data.title || 'Chloé et Jonathan Studio'
     link rel="icon" type="image/png" href="ico.png"
 
-    / Facebook sharing
+    / Social network meta
     meta property="og:url" content="https://chloejonathanstudio.com"
     meta property="og:type" content="website"
     meta property="og:title" content="Chloé et Jonathan Studio - #{current_page.data.h1_wording || current_page.data.title || 'Graphic design'}"
     meta property="og:description" content="#{current_page.data.resume || 'Chloé & Jonathan is a Graphic design studio based in Paris. We help ambitious companies to create or develop their brand image.'}"
-    meta property="og:image" content="https://chloejonathanstudio.com/#{current_page.data.heading_image || 'images/og_picture.png' }"
+    meta property="og:image" content="https://chloejonathanstudio.com/#{current_page.data.heading_image || 'images/og_picture.png' }" data-pin-nopin="true"
+
+    /default FB app id
+    meta property="fb:app_id" content="966242223397117"
 
     <link rel="stylesheet" type="text/css" href="stylesheets/site.css">
     script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"
