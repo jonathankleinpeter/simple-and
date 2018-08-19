@@ -174,17 +174,17 @@
   &:hover, &:active
     background-position: -1em 0
 
-.word2:after
+.word1:after
   @extend %vignette__bold-text
   @extend %vignette__small-base
   background-image: url('../images/vignette_marker.png')
 
-.word8:after
+.word7:after
   @extend %vignette__bold-text
   @extend %vignette__large-base
   background-image: url('../images/vignette_web.png')
 
-.word10:after
+.word9:after
   @extend %vignette__bold-text
   @extend %vignette__small-base
   background-image: url('../images/vignette_print.png')
@@ -365,6 +365,11 @@
 .column__img--article
   max-width: 600px
 
+.column__p--article
+  max-width: 600px 
+  margin-top: 2em
+  margin-bottom: 2em
+
 .journal-article__info
   max-width: 500px
   margin-top: 1em
@@ -415,14 +420,38 @@
   margin: 3em 0 3em 0
   display: block
 
+.article-framed
+  width: 100%
+  margin-top: 6em
+  margin-bottom: 6em
+  padding-left: 3em
+  border-left: 2px solid $black
+
+.article-framed-text
+  font-family: RationalText-SemiBold
+  font-size: 1.4em
+
+.article-framed-list
+  li
+    list-style-type: disc
+    font-size: 1.4em
+    list-style-position: inside 
+
+.article-list
+  li
+    list-style-type: disc
+    padding-left: 0.5em
+    list-style-position: inside 
 
 .share
   margin: 5em 0 5em
 
 .linkedinShareLink, .facebookShareLink
   margin: 2em 2em 2em 0
-  font-size: 1.6em
+  font-size: 1.4em
+  font-family: RationalText-SemiBold
   cursor: pointer
+
 
 // FOOTER
 //========================================================
