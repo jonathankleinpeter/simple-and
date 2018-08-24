@@ -53,6 +53,9 @@ activate :blog do |blog|
     blog.taglink = "tag-{tag}.html"
 end
 
+# i18n Config
+activate :i18n, :mount_at_root => :fr # Mount French at root instead
+
 # Sprockets
 activate :sprockets
 sprockets.append_path File.join(root, 'node_modules')
