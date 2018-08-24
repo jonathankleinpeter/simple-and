@@ -1,0 +1,67 @@
+---
+fr:
+    author:
+        studio_name: Chloé Heinis & Jonathan Kleinpeter
+        studio_name_medium: Chloé & Jonathan
+        studio_name_small: C.H. & J.K.
+
+    index:
+        intro: "Nous designons des identités visuelles pour des supports web et imprimés."
+
+    work: "Projets"
+
+    about: "A propos"
+
+    journal: "Journal"
+
+    project_name:
+        michael_&_giso: Michael & Giso
+        cmd: CMD Amsterdam
+        waterbloom: Waterbloom
+        gerermaboite: GererMaBoite
+        disappear: Disparaître ici
+
+    projects:
+        cmd:
+            h3_wording: "Identité visuelle, conçue avec Grrr.nl"
+            h1_wording: "CMD Amsterdam"
+            intro: CMD propose des formations en design numérique à <span class="amsterdam">Amsterdam</span>. Les étudiants y apprennent comment construire des sites internet, des <span class="digital">applications</span> et des produits numériques.
+            text_1: Cette identité visuelle a été conçue sans logo. Elle est composée d'un ensemble de pictogrammes, qui peuvent être combinés sous forme de totems. Chaque étudiant peut ainsi construire sa propre version de l'identité CMD.
+        disappear:
+            intro: Ce projet est une série d'expérimentations graphiques autour du thème du réchauffement climatique. Des cartes éphémères on été sérigraphiées pour sensibiliser à des espèces et lieux en voie de disparition. L'encre de ces cartes disparaît lorsque le visiteur les oublie dans sa poche. Le mot « disparaître » a été réalisé en lettres de glaçons et fond au fur et à mesure de l'exposition. « le petit livre des arbres » est un livre au sein duquel les pages sont brulées. Une petite sculpture de papier était également présente aux pieds des visiteurs et représentait le haut du Campanil de Venise, comme si le reste était enfuit sous les eaux.
+            text_1: Nous avons imaginé des objets qui se <span class="deteriorate">détériorent</span> et se transforment quand il sont manipulés ou par simple action du temps. Notre but étant d'interpeler le public et de le faire <span class="mind">réfléchir</span> sur le réchauffement climatique.
+            text_2: This model represents the top of Venice <span class="campanile">Campanile</span> as if the rest was flooded. 
+        gerermaboite:
+            intro: GererMaBoite est une plateforme de <span class="management">management</span> et de <span class="accounting">comptabilité</span> pour les petites entreprises.
+            text_1: La facilité d'utilisation et la proximité sont les termes qui ont guidés le design du site.
+        michael_giso:
+            intro: Michael & Giso est une marque de vêtements <span class="tailor">sur-mesure</span> pour hommes basée à Amsterdam.
+            subtitle_1: Wedding Magazine 2018
+            text_1: Ce 'lookbook', créé pour Michael & Giso, est un incontournable pour ceux qui souhaitent se marier dans la tenue parfaite. Il est rempli de conseils sur les vestes, les accessoires, et des astuces pour un mariage parfait. Designé pour inspirés les clients de la marque, l'idée de la mise en page est de jouer avec une typo de titres grasse et à empattements et de larges images.
+            subtitle_2: Grooms' stories
+            text_2: Les articles sur les « grooms' stories » sont les histoires des hommes ayant choisi Michael & Giso pour leur tenue de mariage.
+            text_3: Ces histoires sont déclinées sur différents médiums ; flyers, magazines et sur le site.
+        waterbloom:
+            intro: Waterbloom est une boisson à base de <span class="hibiscus">fleur</span> d'Hibiscus.
+
+    about_section:
+        about_intro: Nous sommes deux designers graphique basés à <span class="paris">Paris</span>. Nous accompagnons des entreprises ambitieuses dans la création et le développement de leur image de marque. Chaque nouveau projet est un challenge que nous avons à <span class="love">cœur</span> de relever avec toute notre <span class="creativity">créativité</span> et passion. 
+        about_us: Nous c'est Chloé Heinis et Jonathan Kleinpeter, deux passionnés de design graphique et typographie. En 2018, après quelques projets réalisés ensemble, notamment lors de notre formation, nous avons décidé de combiner nos connaissances et idées dans un portfolio commun.
+        contact: Contactez-nous !
+        contact_mail: chloejonathanstudio@gmail.com
+        contact_tel: +33 6 86 82 78 50
+        whatwedo: Compétences
+        skills_list1: <li>Animation 2D</li><li>Apps</li><li>Direction artistique</li><li>Branding</li><li>Consulting</li>
+        skills_list2: <li>Stratégie de Communication</li><li>Expositions</li><li>Illustration</li><li>Packaging</li><li>Print</li>
+        skills_list3: <li>Typographie</li><li>Design UI/UX</li><li>Montage video</li><li>Identités Visuelles</li><li>Design de sites</li>
+        publications: Publications
+        publications_list: <li> <a class="visual-link" href="https://www.behance.net/gallery/30663039/Playful-Graphics-Graphic-Design-that-Surprises">Playful Graphics</a>, Sandu Publishing, China, 2016</li><li> Creative Business Cards, Sendpoints, 2015</li><li> Exposition des diplomés de la HEAR, exposition et catalogue, 2015</li><li> Exposition Territoire, Musée des Beaux Arts, Mulhouse, 2014</li>
+        site: Fait avec amour par Jonathan & Chloé, v1.2
+
+    
+         
+    footer:
+        facebook: Follow us on <a class="visual-link visual-link--footer" href="https://www.facebook.com/ChloeetJonathan">Facebook</a>
+        instagram: and <a class="visual-link visual-link--footer" href="https://www.instagram.com/chloejonathanstudio/">Instagram</a>
+        contact_mail: <a class="visual-link--footer" href="mailto:chloejonathanstudio@gmail.com">chloejonathanstudio@gmail.com</a>
+        contact_tel: +33 6 86 82 78 50

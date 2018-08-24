@@ -1,0 +1,66 @@
+---
+en:
+    author:
+        studio_name: Chloé Heinis & Jonathan Kleinpeter
+        studio_name_medium: Chloé & Jonathan
+        studio_name_small: C.H. & J.K.
+
+    index:
+        intro: "We design and develop brand image for web and print"
+
+    work: "Work"
+
+    about: "About"
+
+    journal: "Journal"
+
+    project_name:
+        michael_&_giso: Michael & Giso
+        cmd: CMD Amsterdam
+        waterbloom: Waterbloom
+        gerermaboite: GererMaBoite
+        disappear: Disappear
+
+    projects:
+        cmd:
+            h3_wording: "Visual Identity, Designed with Grrr.nl"
+            h1_wording: "CMD Amsterdam"
+            intro: CMD is a digital design program based in <span class="amsterdam">Amsterdam</span>. Students learn how to build website, apps and <span class="digital">digital</span> products.
+            text_1: There is no logo. Only a multitude of icons that can be display as a totem. Each student can build his own CMD identity.
+        disappear:
+            intro: This project is a serie of graphic experimentations around the theme of global warming. Ephemeral cards were printed with silkscreen on silicon to speak about endangered species and places. The ink disappear when the visitor keep it in his pocket. The word "Disparaitre" was made with Ice letters. "Le petit livre des arbres" is a book where the pages were burned. A Paper model was displayed at the knees of the visitors and represents the Venice's Campanile.
+            text_1: We imagined objects which <span class="deteriorate">deteriorate</span> when they are manipulated. The goal is to call people to <span class="mind">mind</span> and to feel concerned about such an important theme.
+            text_2: This model represents the top of Venice <span class="campanile">Campanile</span> as if the rest was flooded. 
+        gerermaboite:
+            intro: GererMaBoite is a <span class="management">management</span> and <span class="accounting">accounting</span> platform for small companies.
+            text_1: Ease of use and proximity are the terms that guided the design of the site.
+        michael_giso:
+            intro: Michael & Giso is a <span class="tailor">tailor made</span> suits brand based in Amsterdam.
+            subtitle_1: Wedding Magazine 2018
+            text_1: Ce 'lookbook', créé pour Michael & Giso, est un incontournable pour ceux qui souhaitent se marier dans la tenue parfaite. Il est rempli de conseils sur les vestes, les accessoires, et des astuces pour un mariage parfait. Designé pour inspirés les clients de la marque, l'idée de la mise en page est de jouer avec une typo de titres grasse et à empattements et de larges images.
+            subtitle_2: Grooms' stories
+            text_2: Grooms' stories articles, present the tale of men who chose Michael & Giso for their wedding suit.
+            text_3: These stories are displayed on many mediums; flyers, magazines and the website.
+        waterbloom:
+            intro: Waterbloom is a drink made of <span class="hibiscus">Hibiscus</span> flower.
+
+    about_section:
+        about_intro: We are two graphic designers based in <span class="paris">Paris</span>. We help ambitious companies to create or develop their brand image. Every new project is a challenge that we <span class="love">love</span> to take up with all our <span class="creativity">creativity</span> and passion. 
+        about_us: We are Chloé Heinis and Jonathan Kleinpeter, two graphic designers both fond of design and typography. In 2018, after some successful common projects, we decided to combine our knowledge and ideas into a common portfolio.
+        contact: Contact us!
+        contact_mail: chloejonathanstudio@gmail.com
+        contact_tel: +33 6 86 82 78 50
+        whatwedo: What we do
+        skills_list1: <li>2D Animation</li><li>Apps</li><li>Art direction</li><li>Branding</li><li>Consulting</li>
+        skills_list2: <li>Communication strategy</li><li>Exhibitions</li><li>Illustration</li><li>Packaging</li><li>Print</li>
+        skills_list3: <li>Typography</li><li>UI/UX design</li><li>Video montage</li><li>Visual Identity</li><li>Website Design</li>
+        publications: Publications
+        publications_list: <li> <a class="visual-link" href="https://www.behance.net/gallery/30663039/Playful-Graphics-Graphic-Design-that-Surprises">Playful Graphics</a>, Sandu Publishing, China, 2016</li><li> Creative Business Cards, Sendpoints, 2015</li><li> Diploma exhibition HEAR, exhibition and catalogue, 2015</li><li> Exhibition "Territoire", Fine arts museum, Mulhouse, 2014</li>
+        site: Website made with love by Jonathan & Chloé, v1.2
+
+    footer:
+        facebook: Follow us on <a class="visual-link visual-link--footer" href="https://www.facebook.com/ChloeJonathan">Facebook</a>
+        instagram: and <a class="visual-link visual-link--footer" href="https://www.instagram.com/chloejonathanstudio/">Instagram</a>
+        contact_mail: <a class="visual-link--footer" href="mailto:chloejonathanstudio@gmail.com">chloejonathanstudio@gmail.com</a>
+        contact_tel: +33 6 86 82 78 50 
+

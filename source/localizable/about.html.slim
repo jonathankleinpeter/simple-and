@@ -1,0 +1,40 @@
+---
+title: About
+---
+
+.block.block--page-content
+    section
+        .row
+            .col-md-7
+                p.column__p.column__p--headline.column__p--bold = t('about_section.about_intro')
+                p.column__p = t('about_section.about_us')
+
+    section.about__section
+        h2 = t('about_section.contact') 
+        .col-xs-12
+            .skill_ul
+                a.visual-link href="mailto:chloejonathanstudio@gmail.com"
+                    p.column__p--headline.hyphens = t('about_section.contact_mail') 
+                p.column__p--headline = t('about_section.contact_tel')
+
+    section.about__section
+        h2 = t('about_section.whatwedo')
+        .row
+            .col-sm-6.col-md-4
+            	ul.skill_ul = t('about_section.skills_list1')
+
+            .col-sm-6.col-md-4
+                ul.skill_ul = t('about_section.skills_list2')
+                    
+            .col-sm-6.col-md-4
+                ul.skill_ul = t('about_section.skills_list3')
+                    
+    section.about__section
+        h2 = t('about_section.publications')
+        .col-xs-12
+            ul = t('about_section.publications_list')
+
+
+    section.about__section
+        p.column__p = t('about_section.site') 
+

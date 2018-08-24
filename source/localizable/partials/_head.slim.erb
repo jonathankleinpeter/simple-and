@@ -1,0 +1,26 @@
+meta charset="utf-8"
+    / Always force latest IE rendering engine or request Chrome Frame
+    meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"
+
+    meta name="google" content="notranslate"
+    meta name="viewport" content="initial-scale=1, maximum-scale=1"
+    meta name="author" content="Chloé Heinis, Jonathan Kleinpeter"
+    meta name="robots" content="noodp"
+
+    / Use title if it's in the page YAML frontmatter
+    title=current_page.data.h1_wording || current_page.data.title || 'Chloé et Jonathan'
+    link rel="icon" type="image/png" href="ico.png"
+
+    / Social network meta
+    meta property="og:url" content="https://chloejonathanstudio.com"
+    meta property="og:type" content="website"
+    meta property="og:title" content="Chloé et Jonathan - #{current_page.data.h1_wording || current_page.data.title || 'Graphic design'}"
+    meta property="og:description" content="#{current_page.data.resume || 'We are two graphic designers based in Paris. We help ambitious companies to create or develop their brand image.'}"
+    meta property="og:image" content="https://chloejonathanstudio.com/#{current_page.data.heading_image || 'images/og_picture.png' }" data-pin-nopin="true"
+
+    /default FB app id
+    meta property="fb:app_id" content="966242223397117"
+
+    <link rel="stylesheet" type="text/css" href="/stylesheets/site.css">
+    script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+    <script src="javascripts/site.js"></script>
