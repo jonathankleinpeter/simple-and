@@ -5,7 +5,7 @@ body
   padding: 0em
   color: $black
   font-size: $base_grid_size
-  font-family: RationalText-Light
+  font-family: Apercu-Light
   -webkit-font-smoothing: antialiased
   font-variant-ligatures: none
   background-color: $white
@@ -26,12 +26,16 @@ header, footer
   padding: 0
 
 @font-face
-  font-family: RationalText-Light
-  src: url(../fonts/RationalText-Light.ttf)
+  font-family: Apercu-Light
+  src: url(../fonts/Apercu-Light.otf)
 
 @font-face
-  font-family: RationalText-SemiBold
-  src: url(../fonts/RationalText-SemiBold.ttf)
+  font-family: Apercu-Bold
+  src: url(../fonts/Apercu-Bold.otf)
+
+@font-face
+  font-family: Apercu-Regular
+  src: url(../fonts/Apercu-Regular.otf)
 
 @for $i from 1 through length($h_group)
   h#{$i}
@@ -43,11 +47,13 @@ header, footer
     hyphens: none
 
 h1, h2, h4
-  font-family: RationalText-SemiBold
+  font-family: Apercu-Bold
+  a
+    color: $black
 
 p, ul li
   font-size: $p_font_size - 0.2
-  font-family: RationalText-Light
+  font-family: Apercu-Light
   line-height: 2em
   transition: $animation_1x_duration
 
@@ -57,8 +63,9 @@ ul
     list-style-type: none
 
 a
-  color: $black
-  text-decoration: none
+  color: $primary
+  font-family: Apercu-Bold 
+  text-decoration: none !important
 
 *::selection
   background: $black

@@ -37,7 +37,9 @@
 
 .menu__li--active 
   a
+    color: $primary
     &::after
+      color: $primary
       content: "-"
       position: absolute
       text-align: center
@@ -81,7 +83,7 @@
     transform-origin: 100%
     letter-spacing: 0.15em
     white-space: nowrap
-    font-family: RationalText-Light
+    font-family: Apercu-Regular
 
 // INTRO MODULES
 //========================================================
@@ -123,9 +125,9 @@
     width: 100%
     position: absolute
     font-size: 6em
-    font-family: RationalText-SemiBold
+    font-family: Apercu-Bold
     color: $white
-    text-shadow: -1px 0 $black, 0 1px $black, 1px 0 $black, 0 -1px $black
+    text-shadow: -2px 0 $primary, 0 2px $primary, 2px 0 $primary, 0 -2px $primary
     animation: $animation_05x_duration
     margin: 0em
     overflow: hidden
@@ -134,7 +136,7 @@
     top: 40%
     transform: translateY(-50%)
     &:hover
-      color: $black
+      color: $primary
       mix-blend-mode: none
 
   .summary__img
@@ -174,45 +176,45 @@
   &:hover, &:active
     background-position: -1em 0
 
-.word1:after
+.word0:after
   @extend %vignette__bold-text
   @extend %vignette__small-base
-  background-image: url('../images/vignette_marker.png')
+  background-image: url('../images/vignette_marker2.png')
 
-.word7:after
+.word5:after
   @extend %vignette__bold-text
   @extend %vignette__large-base
-  background-image: url('../images/vignette_web.png')
+  background-image: url('../images/vignette_web2.png')
 
-.word9:after
+.word3:after
   @extend %vignette__bold-text
   @extend %vignette__small-base
-  background-image: url('../images/vignette_print.png')
+  background-image: url('../images/vignette_print2.png')
 
 .tailor:after
   @extend %vignette__light-text
   @extend %vignette__large-base
-  background-image: url('../images/vignette_tailor.png')
+  background-image: url('../images/vignette_tailor2.png')
 
 .deteriorate:after
   @extend %vignette__light-text
   @extend %vignette__large-base
-  background-image: url('../images/vignette_deteriorate.png')
+  background-image: url('../images/vignette_deteriorate2.png')
 
 .mind:after
   @extend %vignette__light-text
   @extend %vignette__large-base
-  background-image: url('../images/vignette_mind.png')
+  background-image: url('../images/vignette_mind2.png')
 
 .campanile:after
   @extend %vignette__light-text
   @extend %vignette__large-base
-  background-image: url('../images/vignette_campanile.png')
+  background-image: url('../images/vignette_campanile2.png')
 
 .amsterdam:after
   @extend %vignette__light-text
   @extend %vignette__large-base
-  background-image: url('../images/vignette_amsterdam.png')
+  background-image: url('../images/vignette_amsterdam2.png')
 
 .digital:after
   @extend %vignette__light-text
@@ -222,32 +224,32 @@
 .accounting:after
   @extend %vignette__light-text
   @extend %vignette__large-base
-  background-image: url('../images/vignette_accounting.png')
+  background-image: url('../images/vignette_accounting2.png')
 
 .management:after
   @extend %vignette__light-text
   @extend %vignette__large-base
-  background-image: url('../images/vignette_management.png')
+  background-image: url('../images/vignette_management2.png')
 
 .hibiscus:after
   @extend %vignette__light-text
   @extend %vignette__large-base
-  background-image: url('../images/vignette_hibiscus.png')
+  background-image: url('../images/vignette_hibiscus2.png')
 
 .paris:after
   @extend %vignette__light-text
   @extend %vignette__large-base
-  background-image: url('../images/vignette_paris.png')
+  background-image: url('../images/vignette_paris2.png')
 
 .love:after
   @extend %vignette__light-text
   @extend %vignette__large-base
-  background-image: url('../images/vignette_love.png')
+  background-image: url('../images/vignette_love2.png')
 
 .creativity:after
   @extend %vignette__light-text
   @extend %vignette__large-base
-  background-image: url('../images/vignette_creativity.png')
+  background-image: url('../images/vignette_creativity2.png')
 
 // PROJECT MODULES
 //========================================================
@@ -288,7 +290,7 @@
   font-size: 3em
 
 .column__p--bold
-  font-family: RationalText-SemiBold
+  font-family: Apercu-Bold
 
 .column__img
   width: 100%
@@ -350,8 +352,9 @@ video
     padding: 0
 
 .titletip
-  font-family: RationalText-SemiBold
+  font-family: Apercu-Bold
   margin: 0.5em 0 1em 0
+  color: $black
 
 .card-project:hover .titletip
   visibility: visible
@@ -394,7 +397,7 @@ video
   margin-bottom: 2em
 
 .journal-article-resume
-  font-family: RationalText-SemiBold
+  font-family: Apercu-Light
 
 .journal-article-resume
   margin: 0.5em 0 2em 0
@@ -441,7 +444,7 @@ video
   border-left: 2px solid $black
 
 .article-framed-text
-  font-family: RationalText-SemiBold
+  font-family: Apercu-Bold
   font-size: 1.4em
 
 .article-framed-list
@@ -462,7 +465,7 @@ video
 .linkedinShareLink, .facebookShareLink
   margin: 2em 2em 2em 0
   font-size: 1.4em
-  font-family: RationalText-SemiBold
+  font-family: Apercu-Bold
   cursor: pointer
 
 
@@ -485,7 +488,7 @@ video
 
   .studio-name__md-height, .studio-name__xs-height, .studio-name__sm-height
     font-size: $p_font_size !important
-    font-family: RationalText-Light
+    font-family: Apercu-Regular
 
   .intro
     margin-top: 2.5em
