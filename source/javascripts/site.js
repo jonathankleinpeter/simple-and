@@ -31,7 +31,7 @@ $( document ).ready(function() {
             for (i = 0; i < arr.length; ++i) {
                 text+= "<span class='words word" + i + "'>" + arr[i] + "&nbsp;" + "</span>";
             }
-            $(".intro__presentation").html(text);
+            $(".intro__presentation")(text);
 
             //generate class calling
 
@@ -147,13 +147,13 @@ $( document ).ready(function() {
         //========================================================
 
         var pageState = window.location.pathname
-        if (pageState == '/work.html') {
+        if (pageState == '/work') {
             $('.menu__li').removeClass('menu__li--active')
             $('.menu__li').eq(0).addClass('menu__li--active')
-        } else if (pageState == '/about.html') {
+        } else if (pageState == '/about') {
             $('.menu__li').removeClass('menu__li--active')
             $('.menu__li').eq(1).addClass('menu__li--active')
-        } else if (pageState == '/journal.html') {
+        } else if (pageState == '/journal') {
             $('.menu__li').removeClass('menu__li--active')
             $('.menu__li').eq(2).addClass('menu__li--active')
         }
@@ -172,7 +172,7 @@ $( document ).ready(function() {
 
     Barba.Dispatcher.on('newPageReady', function(currentStatus, oldStatus, container, newPageRawHTML) {
         // html head parser borrowed from jquery pjax
-        var $newPageHead = $( '<head />' ).html(
+        var $newPageHead = $( '<head />' )(
             $.parseHTML(
                 newPageRawHTML.match(/<head[^>]*>([\s\S.]*)<\/head>/i)[0]
                 , document

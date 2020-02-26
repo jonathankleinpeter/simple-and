@@ -17,5 +17,5 @@
                     ul.journal-article__ul
                         - article.tags.each do |tag, articles|
                             li.journal-article__tag
-                                = link_to ActiveSupport::Inflector.transliterate('/tag-' + tag.parameterize + '.html').to_s
+                                = link_to ActiveSupport::Inflector.transliterate('/tag-' + tag.parameterize + '').to_s
                                     span= tag

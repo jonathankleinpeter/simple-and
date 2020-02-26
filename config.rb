@@ -14,6 +14,7 @@ page '/*.json', layout: false
 page '/*.txt', layout: false
 page "/feed.xml", layout: false
 
+
 # With alternative layout
 # page '/path/to/file.html', layout: 'other_layout'
 
@@ -52,6 +53,9 @@ activate :blog do |blog|
     blog.tag_template = "tag.html"
     blog.taglink = "tag-{tag}.html"
 end
+
+activate :directory_indexes
+
 
 # Sprockets
 activate :sprockets
