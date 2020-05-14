@@ -153,7 +153,7 @@ $( document ).ready(function() {
         } else if (pageState == '/about.html') {
             $('.menu__li').removeClass('menu__li--active')
             $('.menu__li').eq(1).addClass('menu__li--active')
-        } else if (pageState == '/journal.html') {
+        } else if (pageState == '/blog.html') {
             $('.menu__li').removeClass('menu__li--active')
             $('.menu__li').eq(2).addClass('menu__li--active')
         }
