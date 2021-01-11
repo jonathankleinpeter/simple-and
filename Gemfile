@@ -10,5 +10,5 @@ gem 'middleman-sprockets'
 
 gem 'middleman-blog'
 gem "middleman-sitemap"
-gem 'redcarpet', '~> 3.3', '>= 3.3.3'
+gem 'redcarpet', '~> 3.5'
 gem "builder", "~> 3.0"
